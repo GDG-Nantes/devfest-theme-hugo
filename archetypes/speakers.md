@@ -10,7 +10,7 @@ socials:
     name: '@XXX'
 shortBio: lorem ipsum ...
 companyLogo: /images/speakers/company/YYY.jpg
-country: 'Toulouse, France'
+country: 'Nantes, France'
 
 ---
 
