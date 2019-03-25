@@ -24,8 +24,8 @@ input[type=button], input[type=reset], input[type=submit] {
   }
 
   &.primary {
-    background-color: var(--primary);
-    color: var(--primary-txt);
+    background-color: var(--secondary);
+    color: var(--secondary-txt);
     text-shadow: var(--extruded-dark);
     --focus-color: var(--lighten-1);
     --active-color: var(--lighten-1);

@@ -1,6 +1,6 @@
 body > footer {
-  background-color: var(--darken-1);
-  color: var(--base-secondary-text);
+  background-color: var(--footer-color);
+  color: var(--secondary-txt);
   font-weight: 200;
 
   a:hover {
@@ -10,6 +10,7 @@ body > footer {
   // Header
   .footer-header {
     display: flex;
+    color: var(--secondary);
     justify-content: space-between;
     font-weight: 500;
     flex-wrap: wrap;
@@ -73,7 +74,8 @@ body > footer {
     .subscribe {
 
       a.btn {
-        color: var(--link-secondary-text);
+        background-color: var(--secondary);
+        color: var(--secondary-txt);
       }
     }
 
@@ -96,6 +98,7 @@ body > footer {
         font-size: 1.125rem;
         font-weight: 600;
         margin-bottom: var(--space-2);
+        color: var(--secondary);
       }
 
       ul {

@@ -73,6 +73,7 @@ body > header {
       border-radius: 5%;
 
       &.active {
+        color: var(--secondary);
         opacity: 1;
         border-bottom-color: currentColor;
       }
@@ -85,7 +86,7 @@ body > header {
       text-decoration: none;
       line-height: calc(var(--toolbar-height) - (4 * var(--space-2)));;
       color: inherit;
-      font-weight: 200;
+      font-weight: 600;
     }
 
     nav a {
