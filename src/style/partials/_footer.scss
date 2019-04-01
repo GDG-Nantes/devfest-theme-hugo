@@ -39,16 +39,16 @@ body > footer {
       }
     }
 
-    .follow a.social {
-      opacity: .75;
-      filter: grayscale(1);
-      transition: filter var(--animation);
+    // .follow a.social {
+    //   opacity: .75;
+    //   filter: grayscale(1);
+    //   transition: filter var(--animation);
 
-      &:hover, &:focus {
-        opacity: 1;
-        filter: grayscale(0);
-      }
-    }
+    //   &:hover, &:focus {
+    //     opacity: 1;
+    //     filter: grayscale(0);
+    //   }
+    // }
 
     .blog a {
       text-decoration: underline;

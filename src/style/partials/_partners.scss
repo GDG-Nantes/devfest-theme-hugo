@@ -31,6 +31,7 @@
     transition: box-shadow var(--animation);
     cursor: pointer;
     color: transparent;
+    background-color: white;
 
     &:hover, &:focus {
       box-shadow: var(--box-shadow-2);
@@ -54,7 +55,7 @@
 .partners-group .fancy {
   line-height: 0.5;
   text-align: center;
-  color: var(--base-secondary-text);
+  color: var(--primary-txt);
 
   span {
     display: inline-block;
@@ -85,7 +86,7 @@
 
 .partners-group.partner-platinium .fancy {
   font-size: 1.5em;
-  color: var(--color-platium);
+  //color: var(--color-platium);
 
   span:before, span:after {
     border-bottom: 1px solid currentColor;
@@ -93,9 +94,18 @@
   }
 }
 
+.partners-group.partner-after-party .fancy {
+  font-size: 1.5em;
+  //color: var(--color-platium);
+
+  span:before, span:after {
+    border-bottom: 1px solid currentColor;
+  }
+}
+
 .partners-group.partner-gold .fancy {
   font-size: 1.33em;
-  color: var(--color-gold);
+  //color: var(--color-gold);
 
   span:before, span:after {
     top: 20%;

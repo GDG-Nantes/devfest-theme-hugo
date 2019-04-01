@@ -1,4 +1,6 @@
 body > main {
+  background-color: var(--primary);
+  color: var(--primary-txt);
   flex-grow: 1;
 
   & > section {
@@ -11,7 +13,7 @@ body > main {
     }
 
     &.primary {
-      background-color: var(--primary);
+      background-color: var(--color-hero);
       color: var(--primary-txt);
     }
 
