@@ -42,15 +42,15 @@
 
         li {
           display: inline-block;
-          opacity: .5;
-          filter: grayscale(1);
-          transition: filter var(--animation);
+          // opacity: .5;
+          // filter: grayscale(1);
+          // transition: filter var(--animation);
 
-          &:hover,
-          &:focus {
-            opacity: 1;
-            filter: grayscale(0);
-          }
+          // &:hover,
+          // &:focus {
+          //   opacity: 1;
+          //   filter: grayscale(0);
+          // }
         }
       }
     }
