@@ -44,13 +44,15 @@
           display: inline-block;
           // opacity: .5;
           // filter: grayscale(1);
-          // transition: filter var(--animation);
+          filter: brightness(0) invert(1);
+          transition: filter var(--animation);
 
-          // &:hover,
-          // &:focus {
-          //   opacity: 1;
-          //   filter: grayscale(0);
-          // }
+          &:hover,
+          &:focus {
+            // opacity: 1;
+            // filter: grayscale(0);
+            filter: brightness(1) invert(0);
+          }
         }
       }
     }
