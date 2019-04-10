@@ -10,7 +10,11 @@
 
   .content {
     h1, h2, h3, h4, h5, h6 {
-      color: var(--primary);
+      color: var(--primary-txt);     
+    }
+    h2 {
+      color: var(--secondary);
+      margin-bottom: 10px;
     }
 
     h3, h4, h5, h6, & > ul, & > ol, & > p {
