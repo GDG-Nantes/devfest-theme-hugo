@@ -1,0 +1,43 @@
+/* ATTENDING */
+.section.attending {
+  
+    h2 {
+        color: var(--secondary);
+        margin-bottom: 10px;
+    }
+
+    .centered-img {
+      text-align: center;
+      margin: var(--space-3) 0;
+    }
+
+    .location {
+        padding: 0;
+        position: relative;
+        background: var(--darken-1);
+        font-weight: 300;
+    
+        .map {
+          display: block;
+          height: 318px;
+          background-position: center center;
+          background-size: cover;
+        }
+    
+        .description {
+          display: inline-block;
+          padding: var(--space-4);
+          width: 400px;
+          position: absolute;
+          bottom: 2rem;
+          right: 2rem;
+          background-color: var(--primary);
+          color: var(--primary-txt);
+    
+          .direction {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+}
