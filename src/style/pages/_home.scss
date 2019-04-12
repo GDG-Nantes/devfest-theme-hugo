@@ -51,13 +51,13 @@
         font-size: 3.5rem;
         font-weight: 100;
 
-        &::after {
-          content: '';
-          display: block;
-          height: .125rem;
-          width: 2rem;
-          background-color: var(--primary);
-        }
+        // &::after {
+        //   content: '';
+        //   display: block;
+        //   height: .125rem;
+        //   width: 2rem;
+        //   background-color: var(--primary);
+        // }
       }
 
       div {
