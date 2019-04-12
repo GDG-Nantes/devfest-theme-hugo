@@ -6,6 +6,10 @@
         margin-bottom: 10px;
     }
 
+    h3, h4, h5, h6, p {
+      margin-left: calc(var(--container-margin)/2 - 2rem);
+    }
+
     .centered-img {
       text-align: center;
       margin: var(--space-3) 0;
@@ -22,6 +26,7 @@
           height: 318px;
           background-position: center center;
           background-size: cover;
+          margin-bottom: 1rem;
         }
     
         .description {

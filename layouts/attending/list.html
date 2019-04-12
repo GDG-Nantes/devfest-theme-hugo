@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+{{ $lang := $.Page.Language.Lang }}
+
+<div class="hero">
+	<div style="width:100%; min-height:50vh; background: url('/images/backgrounds/back-7.jpg') no-repeat right center; background-size: cover;"></div>
+	<h1>{{ $.Page.Params.Title }}</h1>	
+	<div class="description">
+		{{ .TableOfContents }}
+	</div>
+</div>
+
+<section class="content">
+	{{ .Content }}
+</section>
+
+{{ end }}
+
