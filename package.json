@@ -12,7 +12,8 @@
     "start": "run-p watch:*",
     "build:icons": "node icons.js",
     "build:script": "rollup -c rollup.config.prod.js",
-    "build:style": "node-sass src/style/theme.scss -o static; postcss static/theme.css --replace",
+    "build:style": "node-sass src/style/theme.scss -o static",
+    "build:postcss": "postcss static/theme.css --replace",
     "build": "run-p build:*"
   },
   "devDependencies": {
