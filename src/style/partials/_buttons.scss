@@ -9,7 +9,7 @@ input[type=button], input[type=reset], input[type=submit] {
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: .875rem;
+  font-size: 1.4rem;
   font-weight: 100;
   cursor: pointer;
   // text-shadow: var(--extruded-light);
@@ -17,10 +17,10 @@ input[type=button], input[type=reset], input[type=submit] {
   --active-color: var(--darken-1);
 
   &.btn-lg {
-    padding: .5rem 1rem;
-    font-size: 1.25rem;
+    padding: .8rem 1.6rem;
+    font-size: 2.4rem;
     line-height: 1.5;
-    border-radius: .3rem;
+    border-radius: .48rem;
   }
 
   &.primary {
@@ -47,9 +47,9 @@ input[type=button], input[type=reset], input[type=submit] {
 
     .icon {
       margin: var(--space-2);
-      --size: 1.5rem;
-      width: var(--size, 1.5rem);
-      height: var(--size, 1.5rem);
+      --size: 2.4rem;
+      width: var(--size, 2.4rem);
+      height: var(--size, 2.4rem);
       display: inline-block;
       content: '';
       background-repeat: no-repeat;
@@ -62,9 +62,9 @@ input[type=button], input[type=reset], input[type=submit] {
   }
 
   .icon {
-    --size: 1rem;
-    width: var(--size, 1rem);
-    height: var(--size, 1rem);
+    --size: 1.6rem;
+    width: var(--size, 1.6rem);
+    height: var(--size, 1.6rem);
   }
 }
 

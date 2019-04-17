@@ -23,10 +23,10 @@
   .content {
     padding-left: 0;
     padding-right: 0;
-    margin: 2rem var(--container-margin);
+    margin: 3.2rem var(--container-margin);
 
     @include mq($until: md) {
-      margin: 1rem;
+      margin: 1.6rem;
     }
 
     img {
@@ -45,26 +45,26 @@
     }
 
     h1, h2, h3 {
-      margin-top: 1.25rem; // 10px
-      margin-bottom: 0.625rem; // 10px
+      margin-top: 2rem;
+      margin-bottom: 1rem;
     }
 
     h4, h5, h6 {
-      margin-top: 0.625rem; // 10px
-      margin-bottom: 0.625rem; // 10px
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
     p {
       text-align: justify;
-      margin-bottom: 1.5rem;
-      line-height: 1.7rem;
+      margin-bottom: 2.4rem;
+      line-height: 2.72rem;
     }
 
     ul {
-      margin-left: 1rem;
+      margin-left: 1.6rem;
 
       li {
-        line-height: 1.7rem;
+        line-height: 2.72rem;
       }
     }
   }

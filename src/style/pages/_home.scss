@@ -2,13 +2,13 @@
 
   & > section {
     margin: 0;
-    padding: 4rem;
+    padding: 6.4rem;
 
     h2 {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.4rem;
       padding: 0;
-      font-size: 2rem;
-      line-height: 1.875rem;
+      font-size: 3.2rem;
+      line-height: 3rem;
       font-weight: 300;
     }
   }
@@ -35,7 +35,7 @@
 
     .numbers {
       flex: 1 0 33vw;
-      margin: 0 2rem;
+      margin: 0 3.2rem;
       min-width: 33vw;
       display: flex;
       justify-content: space-between;
@@ -48,14 +48,14 @@
 
     .number {
       strong {
-        font-size: 3.5rem;
+        font-size: 5.6rem;
         font-weight: 100;
 
         // &::after {
         //   content: '';
         //   display: block;
-        //   height: .125rem;
-        //   width: 2rem;
+        //   height: .2rem;
+        //   width: 3.2rem;
         //   background-color: var(--primary);
         // }
       }
@@ -149,8 +149,8 @@
       padding: var(--space-4);
       width: 400px;
       position: absolute;
-      bottom: 2rem;
-      right: 2rem;
+      bottom: 3.2rem;
+      right: 3.2rem;
       background-color: var(--primary);
       color: var(--primary-txt);
 
@@ -173,7 +173,7 @@
 @include mq($until: lg) {
   .home main {
     & > section {
-      padding: 2rem;
+      padding: 3.2rem;
     }
 
     .location .description {

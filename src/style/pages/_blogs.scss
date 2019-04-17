@@ -2,7 +2,7 @@
 
   @media (max-width: var(--breakpoint-lg)) {
     main > section {
-      margin: 2rem var(--container-margin-mobile);
+      margin: 3.2rem var(--container-margin-mobile);
     }
   }
 
@@ -33,10 +33,10 @@
         display: inline-block;
         background-position: center center;
         background-size: cover;
-        --size: 16rem;
-        flex: 0 0 var(--size, 16rem);
-        height: var(--size, 16rem);
-        width: var(--size, 16rem);
+        --size: 25.6rem;
+        flex: 0 0 var(--size, 25.6rem);
+        height: var(--size, 25.6rem);
+        width: var(--size, 25.6rem);
         border-radius: var(--space-2);
       }
 
@@ -96,7 +96,7 @@
     display: block;
 
     .img {
-      --size: 8rem;
+      --size: 12.8rem;
       float: left;
       margin-right: .5em;
     }

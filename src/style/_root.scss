@@ -1,6 +1,6 @@
 :root {
   --primary: #871C45;
-  --primary-txt: #FFFFFF;   // #F3F1E5
+  --primary-txt: #FFFFFF;                     // #F3F1E5
 
   --secondary: #EA951B;
   --secondary-txt: #FFFFFF;
@@ -29,19 +29,19 @@
   --color-gold: #b7935b;
   --color-error: firebrick;
 
-  --space-1: .125rem;
-  --space-2: .25rem;
-  --space-3: .5rem;
-  --space-4: 1rem;
+  --space-1: .2rem;
+  --space-2: .4rem;
+  --space-3: 1.7rem;
+  --space-4: 1.6rem;
 
-  --breakpoint-sm: 34.375rem; // 540px
-  --breakpoint-md: 45rem; // 720px
-  --breakpoint-lg: 60rem; // 960px
-  --breakpoint-xl: 71.25rem; // 1140px
+  --breakpoint-sm: 540px;
+  --breakpoint-md: 720px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1140px;
 
   --container-margin: 10vw;
   --container-margin-mobile: 3vw;
-  --toolbar-height: 3.25rem;
+  --toolbar-height: 5.2rem;
 
   --font-family: 'Roboto', sans-serif;
 

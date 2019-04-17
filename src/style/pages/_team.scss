@@ -12,14 +12,14 @@
 
     & > li {
       flex: 1 1 300px;
-      margin: 2rem;
+      margin: 3.2rem;
       display: flex;
 
       .photo {
-        --size: 6rem;
+        --size: 9.6rem;
         box-shadow: 0 0 0 var(--space-2) var(--darken-2);
-        min-width: var(--size, 6rem);
-        height: var(--size, 6rem);
+        min-width: var(--size, 9.6rem);
+        height: var(--size, 9.6rem);
         border-radius: 100%;
         background-size: cover;
         background-color: var(--primary-txt);

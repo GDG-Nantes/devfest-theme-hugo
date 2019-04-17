@@ -14,9 +14,9 @@
     }
 
     .speaker-img {
-      --size: 8rem;
-      height: var(--size, 8rem);
-      min-width: var(--size, 8rem);
+      --size: 12.8rem;
+      height: var(--size, 12.8rem);
+      min-width: var(--size, 12.8rem);
       border-radius: 100%;
       background-size: cover;
       margin: var(--space-2);
@@ -24,7 +24,7 @@
 
     .speaker-company {
       img {
-        max-height: 2rem;
+        max-height: 3.2rem;
         margin: var(--space-1);
       }
       figcaption {

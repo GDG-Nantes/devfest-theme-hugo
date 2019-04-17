@@ -1,4 +1,3 @@
-
 .jumbo {
   position: relative;
   height: calc(100vh - var(--toolbar-height));
@@ -16,13 +15,14 @@
 
   p {
     margin: var(--space-2) 0;
-    font-size: 2rem;
+    font-size: 3.2rem;
   }
 
   .jumbo-cover {
     background-size: cover;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: top center;
+    background-repeat: no-repeat;
     position: absolute;
     top: 0;
     right: 0;
@@ -56,12 +56,12 @@
       overflow: hidden;
       text-align: center;
       h2 {
-        font-size: 2rem;
+        font-size: 3.2rem;
         margin: var(--space-3) 0;
         font-weight: bold;
       }
       h3 {
-        font-size: 1.8rem;
+        font-size: 2.88rem;
         margin: var(--space-3) 0;
       }
     }
@@ -70,7 +70,7 @@
 
   .scroll-down {
     position: absolute;
-    bottom: 2rem;
+    bottom: 3.2rem;
     left: 0;
     transform: translateX(50vw);
     transform-origin: center center;
@@ -108,6 +108,6 @@
       max-width: 100%;
     }
 
-    font-size: 1.5rem;
+    font-size: 2.4rem;
   }
 }
