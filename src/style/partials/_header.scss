@@ -103,9 +103,10 @@ body > header {
         max-width: 2em;
         height: 2em;
         overflow: hidden;
+        line-height: 0;
 
         &::before {
-          color: initial;
+          color: var(--secondary);
         }
 
         &.lang-fr::before {

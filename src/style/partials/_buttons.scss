@@ -3,7 +3,7 @@ a.btn, span.btn,
 input[type=button], input[type=reset], input[type=submit] {
   display: inline-flex;
   align-items: center;
-  border: thin solid var(--darken-3);
+  // border: thin solid var(--darken-3);
   background: var(--darken-1);
   padding: var(--space-3);
   color: inherit;
@@ -17,15 +17,15 @@ input[type=button], input[type=reset], input[type=submit] {
   --active-color: var(--darken-1);
 
   &.btn-lg {
-    padding: .8rem 1.6rem;
-    font-size: 2.4rem;
-    line-height: 1.5;
-    border-radius: .48rem;
+    padding: 2.3rem 5rem;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    border-radius: 1px;
   }
 
   &.primary {
     background-color: var(--secondary);
-    color: var(--color-hero);
+    color: var(--secondary-txt);
     font-weight: 500;
     // text-shadow: var(--extruded-dark);
     --focus-color: var(--lighten-1);
