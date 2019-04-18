@@ -1,6 +1,6 @@
 <div class="ticket" {{ if .Get "soldOut" }}aria-disabled="true"{{end}}>
-	<div class="ticket-name">{{ .Get "name "}}</div>
 	<div class="ticket-price">{{ .Get "price" }}</div>
+	<div class="ticket-name">{{ .Get "name"}}</div>
 	<div class="ticket-date">
 		{{ $lang := $.Page.Language.Lang }}
 		{{ partial "date-short.html" (dict "time" (.Get "starts") "lang" $lang) }}

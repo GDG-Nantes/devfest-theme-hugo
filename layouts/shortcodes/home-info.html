@@ -11,8 +11,8 @@
 			{{ $labelValue := (split . ":") }}
 			{{ $label := (index $labelValue 0) }}
 			{{ $value := (index $labelValue 1) }}
-			<strong>{{ $value }}</strong>
-			<div>{{ $label }}</div>
+			<span class="num">{{ $value }}</span>
+			<span class="label">{{ $label }}</span>
 		</div>
 		{{ end }}
 	</div>

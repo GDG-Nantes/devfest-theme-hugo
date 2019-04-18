@@ -1,56 +1,89 @@
-.tickets ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding-left: 0;
-
-  li {
-    flex-basis: 24rem;
-  }
-
-  li .ticket {
-    margin: var(--space-4);
-    padding: 3.2rem var(--space-3);
-    border: thin solid var(--darken-1);
-    box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
+.tickets {
+  ul {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0;
 
-    &[aria-disabled] {
-      opacity: .5;
-      filter: grayscale(1);
-      cursor: not-allowed;
+    li {
+      flex-basis: 24rem;
     }
 
+    li {
+      flex: 0 0 311px;
+      
+      &:nth-child(3n+1) {
+        .ticket-price { color: var(--secondary); }
+      }
+      &:nth-child(3n+2) {
+        .ticket-price { color: var(--primary); }
+      }
+      &:nth-child(3n+3) {
+        .ticket-price { color: var(--tertiary); }
+      }
 
-    .ticket-name {
-      font-size: 1.6rem;
-    }
+      .ticket {
+        margin: var(--space-4);
+        padding: 3.2rem var(--space-3) 1.2rem;
+        border: thin solid var(--darken-1);
+        box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: var(--tertiary);
+        height: 100%;
+        justify-content: space-between;
+        background-color: #F3F1E5;
 
-    .ticket-price {
-      font-size: 5.6rem;
-      color: var(--primary-txt);
-      font-weight: 200;
-    }
+        &[aria-disabled] {
+          opacity: .5;
+          filter: grayscale(1);
+          cursor: not-allowed;
+        }
 
-    .ticket-date, .ticket-info {
-      font-size: 1.2rem;
-      color: var(--primary-txt);
-    }
+        .ticket-price {
+          position: relative;
+          font-size: 5.6rem;
+          line-height: 1.3;
+          font-weight: 200;
 
-    .btn {
-      margin: var(--space-4);
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: 80px;
+            height: 1px;
+            background-color: #00398F;
+          }
+        }
+
+        .ticket-name {
+          margin-top: 5px;
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        .ticket-date, .ticket-info {
+          font-size: 1.2rem;
+          // color: var(--primary-txt);
+        }
+
+        .btn {
+          margin: var(--space-4);
+        }
+      }
     }
+  }
+  .caption {
+    margin-top: 40px;
+    font-weight: 300;
   }
 }
-
-
-
-
-

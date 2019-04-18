@@ -13,13 +13,30 @@ body > main {
     }
 
     &.primary {
-      background-color: var(--color-hero);
+      background-color: var(--primary);
       color: var(--primary-txt);
+    }
+
+    &.primarydarker {
+      background-color: var(--primarydarker);
+      color: var(--primarydarker-txt);
     }
 
     &.accent {
       background-color: var(--accent);
       color: var(--accent-txt);
+    }
+
+    &.secondary {
+      background-color: var(--secondary);
+      color: var(--secondary-txt);
+
+    }
+
+    &.tertiary {
+      background-color: var(--tertiary);
+      color: var(--tertiary-txt);
+
     }
 
   }

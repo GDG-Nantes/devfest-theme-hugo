@@ -16,6 +16,7 @@
   .info {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-end;
 
     @include mq($until: md) {
       text-align: center;
@@ -47,21 +48,25 @@
     }
 
     .number {
-      strong {
-        font-size: 5.6rem;
-        font-weight: 100;
+      flex: 0 0 20%;
+      text-align: center;
 
-        // &::after {
-        //   content: '';
-        //   display: block;
-        //   height: .2rem;
-        //   width: 3.2rem;
-        //   background-color: var(--primary);
-        // }
+      & + .number {
+        border-left: #4A0B24 thin solid;
       }
 
-      div {
+      .num {
+        display: block;
+        font-size: 5.8rem;
+        line-height: 1;
+        font-weight: 700;
+        color: var(--secondary);
+      }
+      .label {
+        display: block;
         margin: var(--space-1) 0;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
       }
     }
   }
@@ -105,9 +110,10 @@
       overflow: hidden;
       text-shadow: 0 1px 1px var(--darken-3);
       max-width: 50vw;
-      text-align: center;
+      text-align: left;
 
       .youtube-player {
+        margin-top: 35px;
         border: 4px solid white;
         background-color: black;
       }
@@ -125,10 +131,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    p {
-      font-size: 80%;
-    }
   }
 
   .location {
@@ -162,13 +164,13 @@
   }
 }
 
-@supports (grid-template-columns: repeat(auto-fit,minmax(25vmin,1fr))) {
-  .home main .info .numbers {
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+// @supports (grid-template-columns: repeat(auto-fit,minmax(25vmin,1fr))) {
+//   .home main .info .numbers {
+//     justify-content: center;
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+// }
 
 @include mq($until: lg) {
   .home main {

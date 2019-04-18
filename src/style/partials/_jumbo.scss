@@ -50,7 +50,8 @@
 
   .inner-wrapper {
     position: relative;
-    top: 10vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     max-width: 95vw;
 
     .inner {
@@ -121,7 +122,7 @@
 
 @include mq($until: lg) {
   .jumbo .inner {
-    max-width: 80vw;
+    max-width: 95vw;
     padding: 0;
   }
   .jumbo .inner h1 {
