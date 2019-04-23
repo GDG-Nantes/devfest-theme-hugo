@@ -12,22 +12,29 @@
     }
 
     li {
-      flex: 0 0 311px;
+      margin: 20px 0;
+      flex: 0 0 30%;
+      max-width: 370px;
+      min-width: 300px;
       
       &:nth-child(3n+1) {
-        .ticket-price { color: var(--secondary); }
+        .ticket { &:before, &:after { background: url('../images/yellow.svg') no-repeat center center; background-size: cover; }}
+        .ticket-price { color: var(--secondary);  &:after { background-color: var(--secondary); }}
       }
       &:nth-child(3n+2) {
-        .ticket-price { color: var(--primary); }
+        .ticket { &:before, &:after { background: url('../images/red.svg') no-repeat center center; background-size: cover; }}
+        .ticket-price { color: var(--primary);    &:after { background-color: var(--primary);   }}
       }
       &:nth-child(3n+3) {
-        .ticket-price { color: var(--tertiary); }
+        .ticket { &:before, &:after { background: url('../images/blue.svg') no-repeat center center; background-size: cover; }}
+        .ticket-price { color: var(--tertiary);   &:after { background-color: var(--tertiary);  }}
       }
 
       .ticket {
+        position: relative;
         margin: var(--space-4);
-        padding: 3.2rem var(--space-3) 1.2rem;
-        border: thin solid var(--darken-1);
+        padding: 6.2rem var(--space-3) 5.2rem;
+        // border: thin solid var(--darken-1);
         box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
         display: flex;
         flex-direction: column;
@@ -38,6 +45,23 @@
         justify-content: space-between;
         background-color: #F3F1E5;
 
+        &:before, &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 155px;
+          height: 41px;
+        }
+        &:before {
+          top: 0;
+          transform: rotate(180deg);
+        }
+        &:after {
+          bottom: 0;
+        }
+
         &[aria-disabled] {
           opacity: .5;
           filter: grayscale(1);
@@ -46,6 +70,7 @@
 
         .ticket-price {
           position: relative;
+          margin-bottom: 15px;
           font-size: 5.6rem;
           line-height: 1.3;
           font-weight: 200;
@@ -58,13 +83,12 @@
             left: 0;
             margin: auto;
             width: 80px;
-            height: 1px;
-            background-color: #00398F;
+            height: 3px;
           }
         }
 
         .ticket-name {
-          margin-top: 5px;
+          margin-top: 25px;
           font-size: 1.8rem;
           line-height: 2.5rem;
           font-weight: 700;
