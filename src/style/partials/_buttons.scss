@@ -3,7 +3,6 @@ a.btn, span.btn,
 input[type=button], input[type=reset], input[type=submit] {
   display: inline-flex;
   align-items: center;
-  border: 2px thin solid;
   background: var(--darken-1);
   padding: var(--space-3);
   color: inherit;
@@ -15,6 +14,7 @@ input[type=button], input[type=reset], input[type=submit] {
   // text-shadow: var(--extruded-light);
   --focus-color: var(--darken-1);
   --active-color: var(--darken-1);
+  border-radius: 2px;
 
   &.btn-lg {
     padding: 2.3rem 5rem;

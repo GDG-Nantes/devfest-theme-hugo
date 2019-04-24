@@ -1,5 +1,5 @@
 <footer class="container">
-	<div class="footer-wrapper">
+	<div class="inner">
 		<div class="footer-header">
 			<div class="share">
 				<header>{{ i18n "footer_share" }}</header>
@@ -80,7 +80,7 @@
 			{{ if .Site.Params.logos.footer }}
 			<img src="{{ .Site.Params.logos.footer }}" alt="{{ .Site.Title }}">
 			{{ end }}
-			<div>{{ emojify .Site.Params.copyright }}</div>
+			<div class="footer-baseline">{{ emojify .Site.Params.copyright }}</div>
 		</div>
 	</div>
 </footer>

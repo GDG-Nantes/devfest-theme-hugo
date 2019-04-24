@@ -3,16 +3,22 @@ body > header {
   top: 0;
   z-index: 100;
   width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 var(--container-margin) 0 var(--container-margin);
-  box-shadow: 0 var(--space-1) var(--primary),
-  0 var(--space-2) var(--space-1) var(--darken-3);
+  // padding: 0 var(--container-margin) 0 var(--container-margin);
+  box-shadow: 0 var(--space-1) var(--primary), 0 var(--space-2) var(--space-1) var(--darken-3);
   background: var(--primary);
   color: var(--primary-txt);
   border-bottom: var(--secondary) 5px solid;
 
+  .inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    max-width: 2040px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
   .logo img {
     height: calc(var(--toolbar-height) - (2 * var(--space-2)));
     max-width: 180px;
@@ -88,6 +94,12 @@ body > header {
       line-height: calc(var(--toolbar-height) - (4 * var(--space-2)));;
       color: inherit;
       font-weight: 600;
+
+      @include mq($until: 1250px) {
+        font-size: 1.4rem;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
 
     nav a {
@@ -127,7 +139,7 @@ body > header {
 }
 
 @include mq($until: xl) {
-  body > header {
+  body > header .inner {
     flex-wrap: wrap;
 
     label {
@@ -136,6 +148,7 @@ body > header {
 
     nav {
       display: none;
+      padding: 40px 0 30px;
       width: 100%;
       background: var(--primary);
       flex-direction: column;
