@@ -3,9 +3,13 @@
 {{ $lang := $.Page.Language.Lang }}
 
 <div class="hero">
-	<div style="width:100%; min-height:50vh; background: url('/images/backgrounds/back-7.jpg') no-repeat right center; background-size: cover;"></div>
-	<h1>{{ $.Page.Params.Title }}</h1>	
-	<div class="description">
+	<div class="hero-img" style="background-image: url('/images/backgrounds/back-7.jpg');"></div>
+	<div class="hero-title">
+		<h1>{{ $.Page.Params.Title }}</h1>
+	</div>
+</div>
+<div class="hero-desc">
+	<div class="inner description">
 		{{ .TableOfContents }}
 	</div>
 </div>

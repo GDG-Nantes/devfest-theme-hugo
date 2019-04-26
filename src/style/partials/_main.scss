@@ -4,13 +4,13 @@ body > main {
   flex-grow: 1;
 
   & > section {
-    margin: 3.2rem var(--container-margin);
+    // margin: 3.2rem var(--container-margin);
     padding-left: 0;
     padding-right: 0;
 
-    @include mq($until: md) {
-      margin: 1.6rem;
-    }
+    // @include mq($until: md) {
+    //   margin: 1.6rem;
+    // }
 
     &.primary {
       background-color: var(--primary);
@@ -38,6 +38,23 @@ body > main {
       color: var(--tertiary-txt);
 
     }
+  }
+}
 
+.inner {
+  position: relative;
+  width: 95%;
+  max-width: 1260px;
+  margin: auto;
+  text-align: left;
+}
+
+body:not(.home) {
+  h2 {
+    margin: 3rem 0 5rem;
+    text-transform: uppercase;
+  }
+  section {
+    padding: 6rem 0 6.5rem;
   }
 }

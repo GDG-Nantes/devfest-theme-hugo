@@ -37,7 +37,7 @@ hr {
 }
 
 p {
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
 a, a:visited {
@@ -62,8 +62,4 @@ a, a:visited {
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
-}
-
-body > main > section.container, body > header.container, body > footer.container {
-  // padding: 6.4rem var(--container-margin);
 }

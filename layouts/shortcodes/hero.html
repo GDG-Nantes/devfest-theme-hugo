@@ -2,9 +2,13 @@
 {{ $imgLabel := .Get "imgLabel" }}
 
 <div class="hero">
-	<div {{ if $img }}style="width:100%; min-height:50vh; background: url('{{ $img }}') no-repeat right center; background-size: cover;" {{ end }}{{ if $imgLabel }}aria-label="{{ $imgLabel }}"{{ end }}></div>
-	<h1>{{ $.Page.Title }}</h1>
-	<div class="description">
+	<div class="hero-img" {{ if $img }}style="background-image: url('{{ $img }}');" {{ end }}{{ if $imgLabel }}aria-label="{{ $imgLabel }}"{{ end }}></div>
+	<div class="inner">
+		<h1 class="hero-title">{{ $.Page.Title }}</h1>
+	</div>
+</div>
+<div class="hero-desc">
+	<div class="inner description">
 		{{ .Inner }}
 	</div>
 </div>

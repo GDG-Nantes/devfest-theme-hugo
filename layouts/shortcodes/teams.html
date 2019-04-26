@@ -1,16 +1,18 @@
 {{ $site := .Site }}
 {{ range (split (.Get "types") ",") }}
 <section class="members">
-	{{ $typeLabel := (split . "=") }}
-	{{ $type := (index $typeLabel 0) }}
-	{{ $label := (index $typeLabel 1) }}
+	<div class="inner">
+		{{ $typeLabel := (split . "=") }}
+		{{ $type := (index $typeLabel 0) }}
+		{{ $label := (index $typeLabel 1) }}
 
-	<h2>{{ $label }}</h2>
+		<h2>{{ $label }}</h2>
 
-	<ul class="members shuffle">
-		{{ range where $site.AllPages "Params.type" $type }}
-		<li>{{ partial "team.html" . }}</li>
-		{{ end }}
-	</ul>
+		<ul class="members shuffle">
+			{{ range where $site.AllPages "Params.type" $type }}
+			<li>{{ partial "team.html" . }}</li>
+			{{ end }}
+		</ul>
+	</div>
 </section>
 {{ end }}
