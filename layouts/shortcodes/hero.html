@@ -12,8 +12,10 @@
 		</div>
 	</div>
 </div>
-<div class="hero-desc">
-	<div class="inner description">
-		{{ .Inner }}
+{{ if .Inner }}
+	<div class="hero-desc">
+		<div class="inner description">
+			{{ .Inner }}
+		</div>
 	</div>
-</div>
+{{ end }}

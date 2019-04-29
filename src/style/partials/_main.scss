@@ -3,7 +3,7 @@ body > main {
   color: var(--primary-txt);
   flex-grow: 1;
 
-  & > section {
+  section {
     // margin: 3.2rem var(--container-margin);
     padding-left: 0;
     padding-right: 0;
@@ -16,27 +16,26 @@ body > main {
       background-color: var(--primary);
       color: var(--primary-txt);
     }
-
     &.primarydarker {
       background-color: var(--primarydarker);
       color: var(--primarydarker-txt);
+    }
+    &.secondary {
+      background-color: var(--secondary);
+      color: var(--secondary-txt);
+    }
+    &.tertiary {
+      background-color: var(--tertiary);
+      color: var(--tertiary-txt);
+    }
+    &.white {
+      background-color: var(--white);
+      color: var(--primary);
     }
 
     &.accent {
       background-color: var(--accent);
       color: var(--accent-txt);
-    }
-
-    &.secondary {
-      background-color: var(--secondary);
-      color: var(--secondary-txt);
-
-    }
-
-    &.tertiary {
-      background-color: var(--tertiary);
-      color: var(--tertiary-txt);
-
     }
   }
 }

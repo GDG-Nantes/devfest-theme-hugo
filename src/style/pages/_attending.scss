@@ -3,46 +3,90 @@
   
     h2 {
         color: var(--secondary);
-        margin-bottom: 10px;
+        margin-bottom: 3.2rem;
     }
 
-    h3, h4, h5, h6, p {
-      margin-left: calc(var(--container-margin)/2 - 3.2rem);
+    h2, h3, h4, h5, h6 {
+      line-height: 1.3;
     }
 
     .centered-img {
       text-align: center;
       margin: var(--space-3) 0;
+      background-size: cover !important;
     }
 
+    .citymap {
+      border-bottom: var(--secondary) 18px solid;
+
+      h2 {
+        color: var(--tertiary);
+        text-transform: uppercase;
+      }
+    }
+
+    .location, .location-title {
+      h2 {
+        margin-top: 0;
+        font-size: 4.4rem;
+        font-weight: 400;
+      }      
+    }
+
+    .location-title {
+      h2 {
+        padding: 11rem 0 0;
+        text-align: center;
+      }
+    }
     .location {
-        padding: 0;
-        position: relative;
-        background: var(--darken-1);
-        font-weight: 300;
-    
-        .map {
-          display: block;
-          height: 318px;
-          background-position: center center;
-          background-size: cover;
-          margin-bottom: 1.6rem;
-        }
-    
-        .description {
-          display: inline-block;
-          padding: var(--space-4);
-          width: 400px;
-          position: absolute;
-          bottom: 3.2rem;
-          right: 3.2rem;
-          background-color: var(--primary);
-          color: var(--primary-txt);
-    
-          .direction {
-            display: flex;
-            align-items: center;
-          }
+      position: relative;
+      padding: 0;
+      // background: var(--darken-1);
+      font-weight: 300;
+
+      .map {
+        display: block;
+        height: 664px;
+        background-position: center center;
+        background-size: cover;
+      }
+
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      .description {
+        display: inline-block;
+        padding: 4.5rem 6rem 6.5rem;
+        width: 500px;
+        position: absolute;
+        bottom: 6.2rem;
+        right: 3.2rem;
+        background-color: var(--tertiary);
+        color: var(--tertiary-txt);
+
+        .direction {
+          display: flex;
+          align-items: center;
         }
       }
+
+      .btn.btn-icon-only {
+        margin-left: 18px;
+      }
+    }
+    .hours {
+      padding-bottom: 12rem;
+    }
+    .travel {
+      h2 {
+        margin-bottom: 6rem;
+      }
+      h3 {
+        margin-top: 3.5rem;
+        font-size: 2.2rem;
+        color: var(--secondary);
+      }
+    }
 }
