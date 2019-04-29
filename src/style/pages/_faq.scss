@@ -1,6 +1,12 @@
 /* FAQ */
 .page.faq, .page.fr-faq {
 
+  #TableOfContents ul {
+    text-align: left;
+  }
+  .tableofcontents {
+    display: block;
+  }
 
   @include mq($until: md) {
     .hero .description {
@@ -13,13 +19,27 @@
       color: var(--primary-txt);     
     }
     h2 {
+      color: var(--secondary-txt);
+      margin-top: 8rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
       color: var(--secondary);
-      margin-bottom: 10px;
+      font-weight: bold;
+      margin-left: 0;
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-top: var(--primarydarker) 2px solid;
+    }
+    a {
+      color: var(--primary-txt);
+      text-decoration: underline;
     }
 
-    h3, h4, h5, h6, & > ul, & > ol, & > p {
-      margin-left: calc(var(--container-margin)/2 - 3.2rem);
-    }
+    // h3, h4, h5, h6, & > ul, & > ol, & > p {
+    //   margin-left: calc(var(--container-margin)/2 - 3.2rem);
+    // }
 
     li {
       line-height: 1.5;
