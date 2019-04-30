@@ -50,7 +50,7 @@ other = "Suivez nous sur"
 other = "A propos"
 
 [footer_previous_edition]
-other = "Précédente édition"
+other = "Précédentes éditions"
 
 [footer_become_partners]
 other = "Devenir partenaire"
@@ -71,4 +71,4 @@ other = "Newsletter"
 other = "Pas de spam, juste les dernières infos !"
 
 [subscribe_action]
-other = "Souscrire"
+other = "Souscrire à la newsletter"

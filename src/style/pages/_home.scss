@@ -70,7 +70,7 @@
         margin: auto;
         width: 1px;
         height: 49px;
-        border-left: #4A0B24 thin solid;
+        border-left: var(--secondary) thin solid;
       }
 
       .num {
@@ -207,7 +207,7 @@
       width: 500px;
       position: absolute;
       bottom: 3.2rem;
-      right: 3.2rem;
+      left: 3.2rem;
       background-color: var(--tertiary);
       color: var(--tertiary-txt);
 

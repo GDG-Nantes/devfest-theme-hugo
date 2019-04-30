@@ -29,7 +29,6 @@
       h2 {
         margin-top: 0;
         font-size: 4.4rem;
-        font-weight: 400;
       }      
     }
 
@@ -43,7 +42,6 @@
       position: relative;
       padding: 0;
       // background: var(--darken-1);
-      font-weight: 300;
 
       .map {
         display: block;
@@ -54,6 +52,7 @@
 
       h2 {
         margin-bottom: 30px;
+        font-weight: 400;
       }
 
       .description {

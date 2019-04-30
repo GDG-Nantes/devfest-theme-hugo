@@ -49,10 +49,11 @@
   }
 
   .inner-wrapper {
+    display: block;
     position: relative;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    max-width: 95vw;
+    margin: 10vh auto;
+    width: 80vw;
+    max-width: 1280px;
 
     .inner {
       padding: var(--space-4);
