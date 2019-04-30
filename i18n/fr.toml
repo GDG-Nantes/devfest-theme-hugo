@@ -46,6 +46,9 @@ other = "blog"
 [footer_follow_us]
 other = "Suivez nous sur"
 
+[footer_legal_mentions]
+other = "Mentions Légales"
+
 [footer_about]
 other = "A propos"
 

@@ -31,9 +31,14 @@
 				</ul>
 			</div>
 			<div class="email">
-				<a href="mailto:{{ .Site.Params.email }}">
-					{{ partial "icon.html" "email" }}
-					{{- .Site.Params.email -}}
+				<header>
+					<a href="mailto:{{ .Site.Params.email }}">
+						{{ partial "icon.html" "email" }}
+						{{- .Site.Params.email -}}
+					</a>
+				</header>
+				<a href="./legal-mentions" class="social legal-mentions" rel="noreferrer" target="_blank">
+					{{ i18n "footer_legal_mentions"}}
 				</a>
 			</div>
 		</div>
