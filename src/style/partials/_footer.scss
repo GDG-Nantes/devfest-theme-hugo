@@ -27,6 +27,9 @@ body > footer {
       align-items: center;
       text-align: center;
 
+      @include mq($until: 1440px) {
+        padding: 0;
+      }
       @include mq($until: md) {
         flex: 0 0 38%;
       }
