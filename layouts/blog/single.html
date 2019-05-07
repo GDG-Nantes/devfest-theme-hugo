@@ -1,22 +1,17 @@
 {{ define "main" }}
 
-<div class="hero" >
-	<div class="img" style="color: {{ .Params.color | default "#fff" }};background-image: url({{ .Params.image }})"></div>
-
-	<div class="description">
-		<h1>
-			<span>{{ .Title }}</span>
-			<small>{{ .Params.brief }}</small>
-		</h1>
-<!--
-		<hr>
-		{{ .TableOfContents }} -->
+<div class="hero">
+	<div class="hero-img" style="background-image: url('{{ .Params.image }}');"></div>
+	<div class="inner">
+		<h1 class="hero-title">{{ .Title }}</h1>
+		<span class="hero-subtitle">{{ .Params.brief }}</span>
 	</div>
 </div>
 
 <section class="content">
-
-	{{ .Content }}
+	<div class="inner">
+		{{ .Content }}
+	</div>
 </section>
 
 {{ end }}
