@@ -55,11 +55,14 @@ other = "About"
 [footer_previous_edition]
 other = "Previous edition"
 
-[footer_become_partners]
-other = "Become partner"
+[footer_for_partners]
+other = "For Partners"
 
-[footer_become_partners_label]
-other = "Partnership Proposition"
+[footer_partnership_kit_label]
+other = "Partnership Kit"
+
+[footer_media_kit_label]
+other = "Media Kit"
 
 [footer_coc]
 other = "Code of Conduct"

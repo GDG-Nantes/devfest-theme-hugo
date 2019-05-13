@@ -55,11 +55,14 @@ other = "A propos"
 [footer_previous_edition]
 other = "Précédentes éditions"
 
-[footer_become_partners]
-other = "Devenir partenaire"
+[footer_for_partners]
+other = "Pour les sponsors"
 
-[footer_become_partners_label]
-other = "Proposition de partenariat"
+[footer_partnership_kit_label]
+other = "Kit Sponsor"
+
+[footer_media_kit_label]
+other = "Kit Media"
 
 [footer_coc]
 other = "Code de conduite"
