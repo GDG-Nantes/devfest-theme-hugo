@@ -37,7 +37,7 @@
 						{{- .Site.Params.email -}}
 					</a>
 				</header>
-				<a href="/legal-mentions/" class="social legal-mentions" rel="noreferrer" target="_blank">
+				<a href="{{ "/legal-mentions/" | relLangURL }}" class="social legal-mentions" rel="noreferrer" target="_blank">
 					{{ i18n "footer_legal_mentions"}}
 				</a>
 			</div>
@@ -53,7 +53,7 @@
 				<ul>
 					{{ range .links }}
 					<li>
-						<a href="{{ .url }}" {{ if .newTab }}target="_blank" rel="noopener" {{end}}>
+						<a href="{{ .url | relLangURL }}" {{ if .newTab }}target="_blank" rel="noopener" {{end}}>
 							{{ if .nameKey }}
 							{{ i18n .nameKey }}
 							{{ else }}
