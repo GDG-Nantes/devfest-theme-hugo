@@ -1,4 +1,25 @@
+.partners {
+  .inner {
+    text-align: center;
+  }
+  .hero-desc .btn {
+    margin-top: 20px;
+  }
+}
+
 .partners-group {
+
+  .fancy {
+    display: inline-block;
+    margin-bottom: 3.2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .inner {
+    max-width: 1900px;
+  }
+
   h3 {
     text-align: center;
     margin: var(--space-4) 0;
@@ -19,7 +40,8 @@
   }
 
   .partner {
-    padding: var(--space-3);
+    // padding: var(--space-3);
+    padding: 1rem;
     display: block;
     height: 100%;
     width: 100%;
@@ -83,33 +105,60 @@
   }
 }
 
+.partners-group.partner-platinium {
+  .partner {
+    padding: 1rem;
+  }
+  .fancy {
+    font-size: 1.5em;
+    //color: var(--color-platium);
 
-.partners-group.partner-platinium .fancy {
-  font-size: 1.5em;
-  //color: var(--color-platium);
-
-  span:before, span:after {
-    border-bottom: 1px solid currentColor;
-    border-top: 1px solid currentColor;
+    span:before, span:after {
+      border-bottom: 1px solid currentColor;
+      border-top: 1px solid currentColor;
+    }
   }
 }
 
-.partners-group.partner-after-party .fancy {
-  font-size: 1.5em;
-  //color: var(--color-platium);
+.partners-group.partner-after-party {
+  .partner {
+    padding: 1rem;
+  }
+  .fancy {
+    font-size: 1.5em;
+    //color: var(--color-platium);
 
-  span:before, span:after {
-    border-bottom: 1px solid currentColor;
+    span:before, span:after {
+      border-bottom: 1px solid currentColor;
+      border-top: 1px solid currentColor;
+    }
   }
 }
 
-.partners-group.partner-gold .fancy {
-  font-size: 1.33em;
-  //color: var(--color-gold);
+.partners-group.partner-gold {
+  .partner {
+    padding: 1rem;
+  }
+  .fancy {
+    font-size: 1.33em;
+    //color: var(--color-gold);
 
-  span:before, span:after {
-    top: 20%;
-    border-bottom: 1px solid currentColor;
+    span:before, span:after {
+      top: 20%;
+      border-bottom: 1px solid currentColor;
+      border-top: 1px solid currentColor;
+    }
   }
 }
 
+.partners-group.partner-partner {
+  .partner {
+    padding: 0.7rem;
+  }
+}
+
+.partners-group.partner-communities {
+  .partner {
+    padding: 0.5rem;
+  }
+}
