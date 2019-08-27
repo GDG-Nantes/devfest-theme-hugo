@@ -28,9 +28,11 @@
 				<a href="{{ .URL }}" class="visually-hidden">{{ .Title }}</a>
 				<a href="{{ .URL }}" class="talk tag-{{ anchorize (delimit .Params.tags "" ) }}">
 				<div class="tags">
-					{{ range .Params.tags }}
-					<span>{{ . }}</span>
-					{{ end }}
+                    {{ range .Params.tags }}
+                        {{ range first 1 (where $.Site.Data.categories "key" .) }}
+                            <span>{{ .name }}</span>
+                        {{ end }}
+                    {{ end }}
 				</div>
 				<span class="language {{ anchorize .Params.language }}"></span>
 				<h3 class="text">{{ .Title }}</h3>
