@@ -11,13 +11,19 @@
 	{{ if.Params.tags }}
 	<div class="tags">
 		{{ range .Params.tags }}
-		<span>{{ . }}</span>
+		    {{ range first 1 (where $.Site.Data.categories "key" .) }}
+			    <span>{{ .name }}</span>
+		    {{ end }}
 		{{ end }}
 	</div>
 	{{ end }}
 
 	<div class="complexity">{{ .Params.complexity }}</div>
-	<div class="type type-{{ anchorize .Params.talkType }}">{{ .Params.talkType }}</div>
+	<div class="type type-{{ anchorize .Params.talkType }}">
+        {{ range where $.Site.Data.formats "key" .Params.talkType }}
+            {{ .name }}
+        {{ end }}
+    </div>
 </div>
 
 
