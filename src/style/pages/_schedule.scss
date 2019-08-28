@@ -354,7 +354,7 @@
   
   }
   
- /*  
+ 
   @include mq($until: xxl) {
     .section.schedule main > section.schedule {
       --container-margin: 0em;
@@ -388,7 +388,7 @@
       }
     }
   }
-   */
+
   @media print {
     .section.schedule main section.schedule .session {
       font-size: 24px;
