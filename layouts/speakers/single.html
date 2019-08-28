@@ -49,7 +49,9 @@
 	<header>
 		<h2>{{ .Page.Params.city }}</h2>
 		<figure class="speaker-company">
+			{{ if .Page.Params.companyLogo }}
 			<img src="{{ .Page.Params.companyLogo }}" alt="{{ .Page.Params.company }}">
+			{{ end }}			
 			<figcaption>{{ .Page.Params.company }}</figcaption>
 		</figure>
 	</header>

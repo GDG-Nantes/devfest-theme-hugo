@@ -36,7 +36,9 @@
 								<span class="speaker-country">{{ .Params.city }}</span>
 							</div>
 							<figure class="speaker-company">
+								{{ if .Params.companyLogo }}
 								<img src="{{ .Params.companyLogo }}" alt="{{ .Params.company }}">
+								{{ end }}
 								<figcaption>{{ .Params.company }}</figcaption>
 							</figure>
 						</span>
