@@ -1,37 +1,39 @@
 <a href="{{ .Permalink }}">
-	<h4>
-		{{ .Title }}
-		<span class="language {{ anchorize .Params.language }}"></span>
-	</h4>
+    <h4 title="{{ .Title }}">
+        {{ .Title }}
+        <span class="language {{ anchorize .Params.language }}"></span>
+    </h4>
 
-	<hr>
+    <hr>
 
-	<div class="info">
-		{{ if .Params.tags }}
-		<div class="tags">
+    <div class="info">
+        {{ if .Params.complexity }}
+        <div class="complexity" title="{{ .Params.complexity }}">
+            <svg><use xlink:href="#level-{{ .Params.complexity }}"></use></svg>
+        </div>
+        {{ end }}
+
+        {{ if .Params.tags }}
+        <div class="tags">
             {{ range .Params.tags }}
-                {{ range first 1 (where $.Site.Data.categories "key" .) }}
-                    <span>{{ .name }}</span>
-                {{ end }}
+            {{ range first 1 (where $.Site.Data.categories "key" .) }}
+            <span>{{ .name }}</span>
             {{ end }}
-		</div>
-		{{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
 
-		{{ if .Params.complexity }}
-		<div class="complexity">{{ .Params.complexity }}</div>
-		{{ end }}
-	</div>
-
-	{{ if .Params.speakers }}
-	<ul class="speakers">
-		{{ range where $.Site.RegularPages "Params.key" "in" .Params.speakers }}
-		<li class="speaker">
-			<div class="speaker-img" style="background-image: url({{ .Params.photo }});"></div>
-			<strong class="speaker-name">{{ .Params.name }}</strong>
+    {{ if .Params.speakers }}
+    <ul class="speakers {{ if eq 1 (len .Params.speakers) }}single{{ else }}multi{{ end }}">
+        {{ range where $.Site.RegularPages "Params.key" "in" .Params.speakers }}
+        <li class="speaker">
+            <div class="speaker-img" style="background-image: url({{ .Params.photo }});"></div>
+            <strong class="speaker-name">{{ .Params.name }}</strong>
 <!--			<div class="speaker-company">{{ .Params.company }}</div>-->
-		</li>
-		{{ end }}
-	</ul>
-	{{ end }}
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
 
 </a>
