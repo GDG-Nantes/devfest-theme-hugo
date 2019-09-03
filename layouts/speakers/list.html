@@ -3,12 +3,14 @@
 {{ .Content }}
 
 <section>
-	<ul class="speakers shuffle">
-		{{ $speakers := where .Site.AllPages ".Section" "speakers" }}
-		{{ range where $speakers ".Kind" "page" }}
-		<li>{{ partial "speaker.html" . }}</li>
-		{{ end }}
-	</ul>
+	<div class="inner">
+		<ul class="speakers shuffle">
+			{{ $speakers := where .Site.AllPages ".Section" "speakers" }}
+			{{ range where $speakers ".Kind" "page" }}
+			<li>{{ partial "speaker.html" . }}</li>
+			{{ end }}
+		</ul>
+	</div>
 </section>
 
 {{ end }}

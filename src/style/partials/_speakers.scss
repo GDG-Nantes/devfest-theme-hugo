@@ -10,7 +10,9 @@
     .info {
       display: flex;
       flex-direction: column;
+      flex: 1;
       align-items: center;
+      text-align: center;
     }
 
     .speaker-img {
@@ -35,13 +37,22 @@
     .speaker-name {
       font-weight: 600;
       margin: var(--space-1);
+      text-transform: uppercase;
+      color: var(--secondary);
+
     }
 
     .speaker-company {
       font-weight: 200;
       opacity: .8;
-      margin: var(--space-1);
+      // margin: var(--space-1);
+      margin: 1.7rem 0 1.2rem;
     }
 
+    .speaker-country {
+      color: var(--primary);
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
   }
 }
