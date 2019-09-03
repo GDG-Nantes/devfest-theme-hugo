@@ -51,8 +51,9 @@
 		<figure class="speaker-company">
 			{{ if .Page.Params.companyLogo }}
 			<img src="{{ .Page.Params.companyLogo }}" alt="{{ .Page.Params.company }}">
-			{{ end }}			
-			<figcaption>{{ .Page.Params.company }}</figcaption>
+			{{ else }}			
+            <figcaption>{{ .Page.Params.company }}</figcaption>
+            {{ end }}
 		</figure>
 	</header>
 
