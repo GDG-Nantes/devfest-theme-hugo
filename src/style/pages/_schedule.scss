@@ -1,9 +1,15 @@
 .section.schedule {
+  main {
+    padding-bottom: 10rem;
+  }
 
     .hero {
+    }
+    .hero-desc {
       .description {
         display: flex;
-  
+        justify-content: center;
+
         p + p {
           margin-left: 1em;
         }
@@ -26,10 +32,19 @@
   
         color: var(--primary);
         background-color: var(--primary-txt);
+        opacity: 0.5;
+        transition: all 0.15s;
   
+        &:hover, &:focus {
+          box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
+          transition: all 0.15s;
+        }        
+
         &.active {
-          background-color: var(--primary);
-          color: var(--primary-txt);
+          background-color: var(--primary-txt);
+          color: var(--primary);
+          opacity: 1;
+          transition: all 0.15s;
         }
       }
     }
@@ -57,7 +72,7 @@
       justify-content: center;
       align-items: flex-start;
       color: var(--primary);
-      background-color: var(--primary-txt);
+      // background-color: var(--primary-txt);
       margin: .125em;
   
       h3 {
@@ -97,7 +112,9 @@
     .session {
       position: relative;
       margin: 1rem 1rem 1rem 5ch;
-      border-radius: var(--space-2);
+      // border-radius: var(--space-2);
+      background-color: var(--white) !important;
+      color: black;
   
       &.tag-open, &.tag-pause, &.tag-lunch, &.tag-party {
         background-position: center center;
@@ -110,7 +127,7 @@
   
         h4 {
           color: white;
-          text-shadow: 2px 1px 1px black;
+          // text-shadow: 2px 1px 1px black;
         }
       }
   
@@ -119,12 +136,20 @@
           display: none;
         }
       }
+
+      // &.tag-web .speakers { background-color: #EA951B; }
+      // &.tag-discovery .speakers { background-color: #55B68D; }
+      // &.tag-cloud-devops .speakers { background-color: #438167; }
+      // &.tag-languages .speakers { background-color: #00398F; }
+      // &.tag-ux-ui .speakers { background-color: #871C45; }
+      // &.tag-security .speakers { background-color: #871C45; }
   
       .slot {
         display: none;
       }
   
       & > a {
+        padding: 5px 10px;
         border: thin solid var(--darken-1);
         box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
         transition: box-shadow var(--animation);
@@ -144,7 +169,7 @@
         }
   
         h4 {
-          text-shadow: 2px 1px 1px white;
+          // text-shadow: 2px 1px 1px white;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -152,7 +177,7 @@
   
         hr {
           width: calc(100% - var(--space-3));
-          margin: 0 auto;
+          margin: 3px auto 8px;
         }
   
         .info {
@@ -175,14 +200,17 @@
         .speakers {
           border: thin solid transparent;
           border-radius: var(--space-2);
-          background: var(--base);
+          // background: var(--base);
+          background: var(--secondary);
           padding: 0;
           margin: 0;
           list-style: none;
+          color: white;
+          min-height: 30px;
         }
   
         .speaker + .speaker {
-          border-top: thin solid var(--darken-1);
+          // border-top: thin solid var(--darken-1);
         }
   
         .speaker {
@@ -236,18 +264,19 @@
         grid-column: 1 / 2;
         --start: calc(1 + var(--row-start));
         --end: calc(1 + var(--row-end));
-        grid-row: var(--start) / var(--end);
-  
+        grid-row: var(--start) / var(--end);  
         background-color: var(--color-hero);
+        color: var(--secondary);
+        padding: 0 2px;
       }
   
       .room {
         grid-column: calc(var(--room) + 2);
         grid-row: 1 / -1;
   
-        &.even {
-          background-color: var(--color-hero);
-        }
+        // &.even {
+        //   background-color: var(--color-hero);
+        // }
       }
   
       .session {
@@ -414,8 +443,3 @@
       }
     }
   }
-
-// temp color :
-.section.schedule .session > a {
-  color: red;
-}

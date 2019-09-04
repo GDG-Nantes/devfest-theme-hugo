@@ -29,7 +29,7 @@
         {{ range where $.Site.RegularPages "Params.key" "in" .Params.speakers }}
         <li class="speaker">
             <div class="speaker-img" style="background-image: url({{ .Params.photo }});"></div>
-            <strong class="speaker-name">{{ .Params.name }}</strong>
+            <div class="speaker-name">{{ .Params.name }}</div>
 <!--			<div class="speaker-company">{{ .Params.company }}</div>-->
         </li>
         {{ end }}

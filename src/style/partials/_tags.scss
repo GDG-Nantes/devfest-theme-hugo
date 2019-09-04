@@ -39,24 +39,24 @@ section .tags {
   border-radius: var(--space-2);
   background: var(--darken-1);
   border: thin solid var(--darken-2);
-  text-shadow: var(--extruded-light);
+  // text-shadow: var(--extruded-light);
 }
 
 
 .tag-open {
- background-image: url('/images/backgrounds/open.png');
+ background-image: url('/images/backgrounds/open.jpg');
 }
 
 .tag-pause {
- background-image: url('/images/backgrounds/pause.png');
+ background-image: url('/images/backgrounds/pause.jpg');
 }
 
 .tag-lunch {
- background-image: url('/images/backgrounds/lunch.png');
+ background-image: url('/images/backgrounds/lunch.jpg');
 }
 
 .tag-party {
- background-image: url('/images/backgrounds/party.png');
+ background-image: url('/images/backgrounds/party.jpg');
 }
 
 .tag-keynote {

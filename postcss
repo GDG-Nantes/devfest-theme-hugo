@@ -995,20 +995,19 @@ section .tags {
   padding: var(--space-1);
   border-radius: var(--space-2);
   background: var(--darken-1);
-  border: thin solid var(--darken-2);
-  text-shadow: var(--extruded-light); }
+  border: thin solid var(--darken-2); }
 
 .tag-open {
-  background-image: url("/images/backgrounds/open.png"); }
+  background-image: url("/images/backgrounds/open.jpg"); }
 
 .tag-pause {
-  background-image: url("/images/backgrounds/pause.png"); }
+  background-image: url("/images/backgrounds/pause.jpg"); }
 
 .tag-lunch {
-  background-image: url("/images/backgrounds/lunch.png"); }
+  background-image: url("/images/backgrounds/lunch.jpg"); }
 
 .tag-party {
-  background-image: url("/images/backgrounds/party.png"); }
+  background-image: url("/images/backgrounds/party.jpg"); }
 
 .tag-keynote {
   background: var(--general); }
@@ -1473,9 +1472,13 @@ form input {
 .page.partners .content img {
   width: 50vw; }
 
-.section.schedule .hero .description {
-  display: flex; }
-  .section.schedule .hero .description p + p {
+.section.schedule main {
+  padding-bottom: 10rem; }
+
+.section.schedule .hero-desc .description {
+  display: flex;
+  justify-content: center; }
+  .section.schedule .hero-desc .description p + p {
     margin-left: 1em; }
 
 .section.schedule nav.day-tabs {
@@ -1491,10 +1494,17 @@ form input {
     border-radius: var(--space-3);
     text-align: center;
     color: var(--primary);
-    background-color: var(--primary-txt); }
+    background-color: var(--primary-txt);
+    opacity: 0.5;
+    transition: all 0.15s; }
+    .section.schedule nav.day-tabs a:hover, .section.schedule nav.day-tabs a:focus {
+      box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
+      transition: all 0.15s; }
     .section.schedule nav.day-tabs a.active {
-      background-color: var(--primary);
-      color: var(--primary-txt); }
+      background-color: var(--primary-txt);
+      color: var(--primary);
+      opacity: 1;
+      transition: all 0.15s; }
 
 .section.schedule main > section.schedule {
   margin: 1rem 2rem 2rem;
@@ -1512,7 +1522,6 @@ form input {
   justify-content: center;
   align-items: flex-start;
   color: var(--primary);
-  background-color: var(--primary-txt);
   margin: .125em; }
   .section.schedule .room h3 {
     border: medium solid currentColor;
@@ -1542,7 +1551,8 @@ form input {
 .section.schedule .session {
   position: relative;
   margin: 1rem 1rem 1rem 5ch;
-  border-radius: var(--space-2); }
+  background-color: var(--white) !important;
+  color: black; }
   .section.schedule .session.tag-open, .section.schedule .session.tag-pause, .section.schedule .session.tag-lunch, .section.schedule .session.tag-party {
     background-position: center center;
     background-size: cover;
@@ -1550,13 +1560,13 @@ form input {
     .section.schedule .session.tag-open > a, .section.schedule .session.tag-pause > a, .section.schedule .session.tag-lunch > a, .section.schedule .session.tag-party > a {
       box-shadow: none; }
     .section.schedule .session.tag-open h4, .section.schedule .session.tag-pause h4, .section.schedule .session.tag-lunch h4, .section.schedule .session.tag-party h4 {
-      color: white;
-      text-shadow: 2px 1px 1px black; }
+      color: white; }
   .section.schedule .session.tag-open .tags, .section.schedule .session.tag-pause .tags, .section.schedule .session.tag-lunch .tags, .section.schedule .session.tag-party .tags, .section.schedule .session.tag-office-hours .tags {
     display: none; }
   .section.schedule .session .slot {
     display: none; }
   .section.schedule .session > a {
+    padding: 5px 10px;
     border: thin solid var(--darken-1);
     box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
     transition: box-shadow var(--animation);
@@ -1571,13 +1581,12 @@ form input {
     .section.schedule .session > a h4, .section.schedule .session > a .info {
       padding: var(--space-2); }
     .section.schedule .session > a h4 {
-      text-shadow: 2px 1px 1px white;
       display: flex;
       justify-content: space-between;
       align-items: center; }
     .section.schedule .session > a hr {
       width: calc(100% - var(--space-3));
-      margin: 0 auto; }
+      margin: 3px auto 8px; }
     .section.schedule .session > a .info {
       flex-grow: 1;
       display: flex;
@@ -1592,12 +1601,12 @@ form input {
     .section.schedule .session > a .speakers {
       border: thin solid transparent;
       border-radius: var(--space-2);
-      background: var(--base);
+      background: var(--secondary);
       padding: 0;
       margin: 0;
-      list-style: none; }
-    .section.schedule .session > a .speaker + .speaker {
-      border-top: thin solid var(--darken-1); }
+      list-style: none;
+      color: white;
+      min-height: 30px; }
     .section.schedule .session > a .speaker {
       display: flex;
       align-items: center;
@@ -1634,12 +1643,12 @@ form input {
       --start: calc(1 + var(--row-start));
       --end: calc(1 + var(--row-end));
       grid-row: var(--start)/var(--end);
-      background-color: var(--color-hero); }
+      background-color: var(--color-hero);
+      color: var(--secondary);
+      padding: 0 2px; }
     .section.schedule main > section.schedule .day .room {
       grid-column: calc(var(--room) + 2);
       grid-row: 1 / -1; }
-      .section.schedule main > section.schedule .day .room.even {
-        background-color: var(--color-hero); }
     .section.schedule main > section.schedule .day .session {
       margin: .125em;
       z-index: 1;
@@ -1730,9 +1739,6 @@ form input {
     display: block; }
     .section.schedule main > section.schedule .day .session .speakers.multi .speaker .speaker-name {
       display: block; } }
-
-.section.schedule .session > a {
-  color: red; }
 
 .section.speakers .inner {
   max-width: 1900px; }
