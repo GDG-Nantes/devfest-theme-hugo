@@ -305,7 +305,7 @@ body > main {
       background-color: var(--accent);
       color: var(--accent-txt); }
 
-.inner {
+.inner, .hero-inner {
   position: relative;
   width: 95%;
   max-width: 1260px;
@@ -313,7 +313,7 @@ body > main {
   margin: auto;
   text-align: left; }
 
-body:not(.home) h2 {
+body:not(.home) h2:not(.nostyle) {
   margin: 3rem 0 5rem;
   font-size: 4.4rem;
   font-weight: 700; }
@@ -1731,67 +1731,96 @@ form input {
   .section.speakers a.speaker:hover, .section.speakers a.speaker:focus {
     box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3); }
 
-.page.speakers .hero header, .page.speakers .hero .description {
-  padding: var(--space-4) var(--container-margin); }
-
-.page.speakers .hero header {
-  display: flex;
-  align-items: center; }
-  .page.speakers .hero header .speaker-img {
-    --size: 9.6rem;
-    height: var(--size, 9.6rem);
-    min-width: var(--size, 9.6rem);
-    border-radius: 100%;
-    background-size: cover;
-    box-shadow: 0 0 var(--space-3) var(--darken-3);
-    margin-right: var(--space-4); }
-  .page.speakers .hero header h1 {
-    margin: 0;
-    padding: 0; }
-  .page.speakers .hero header ul.socials {
+.page.speakers .speaker-hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  min-height: 500px;
+  max-height: 750px;
+  background-color: var(--tertiary);
+  border-bottom: var(--secondary) 5px solid; }
+  .page.speakers .speaker-hero .inner {
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 1.25em;
-    justify-content: flex-start; }
-    .page.speakers .hero header ul.socials li {
-      flex: 0 1 auto;
-      padding-right: var(--space-4); }
-      .page.speakers .hero header ul.socials li a.social {
-        width: auto;
-        color: inherit; }
-        .page.speakers .hero header ul.socials li a.social .icon {
-          width: 1em; }
+    flex-direction: column;
+    justify-content: center; }
+  .page.speakers .speaker-hero header {
+    display: flex;
+    align-items: center;
+    flex-direction: row; }
+    .page.speakers .speaker-hero header .speaker-img {
+      --size: 13.6rem;
+      height: var(--size, 9.6rem);
+      min-width: var(--size, 9.6rem);
+      border-radius: 100%;
+      background-size: cover;
+      box-shadow: 0 0 var(--space-3) var(--darken-3);
+      margin-right: 40px; }
+    .page.speakers .speaker-hero header h1 {
+      margin: 0;
+      padding: 0;
+      margin-top: 15px;
+      color: var(--secondary);
+      font-size: 4.4rem;
+      font-weight: 700; }
+    .page.speakers .speaker-hero header ul.socials {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 1.25em;
+      justify-content: flex-start; }
+      .page.speakers .speaker-hero header ul.socials li {
+        flex: 0 1 auto;
+        padding-right: var(--space-4); }
+        .page.speakers .speaker-hero header ul.socials li a.social {
+          width: auto;
+          color: inherit;
+          font-size: 1.4rem;
+          filter: brightness(0) invert(1); }
+          .page.speakers .speaker-hero header ul.socials li a.social .icon {
+            width: 1em;
+            margin-right: 5px;
+            font-size: 2rem; }
 
-.page.speakers .hero .description .talks {
-  padding-left: 0;
-  list-style: none; }
-  .page.speakers .hero .description .talks .talk {
-    border: thin solid var(--darken-1);
-    display: inline-flex;
-    padding: var(--space-2);
-    border-radius: var(--space-1); }
-    .page.speakers .hero .description .talks .talk .tags, .page.speakers .hero .description .talks .talk .language {
-      margin-right: 1ch; }
-    .page.speakers .hero .description .talks .talk .tags {
-      white-space: nowrap;
-      align-self: center; }
-    .page.speakers .hero .description .talks .talk.tag- {
-      display: none; }
+.page.speakers .description {
+  padding: 6rem 0 2rem; }
+  .page.speakers .description .talks {
+    padding-left: 0;
+    list-style: none; }
+    .page.speakers .description .talks .talk {
+      display: inline-flex;
+      padding: var(--space-2);
+      border-radius: var(--space-1);
+      background-color: transparent !important; }
+      .page.speakers .description .talks .talk .tags, .page.speakers .description .talks .talk .language {
+        margin-right: 1ch; }
+      .page.speakers .description .talks .talk .tags {
+        white-space: nowrap;
+        align-self: center;
+        margin-right: 30px; }
+      .page.speakers .description .talks .talk.tag- {
+        display: none; }
+    .page.speakers .description .talks .talk-title {
+      margin-right: 30px; }
 
-.page.speakers section.speaker header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-.page.speakers section.speaker .speaker-company {
-  margin: var(--space-3) 0;
-  display: flex;
-  align-items: center; }
-  .page.speakers section.speaker .speaker-company img {
-    height: 6.4rem;
-    margin-right: var(--space-4); }
+.page.speakers section.speaker {
+  padding-bottom: 10rem; }
+  .page.speakers section.speaker header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .page.speakers section.speaker .speaker-city {
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--secondary);
+    font-style: italic; }
+  .page.speakers section.speaker .speaker-company {
+    margin: 17px 0 30px;
+    display: flex;
+    align-items: center; }
+    .page.speakers section.speaker .speaker-company img {
+      height: 6.4rem;
+      margin-right: var(--space-4); }
 
 @media (max-width: var(--breakpoint-lg)) {
   .section.blog main > section {

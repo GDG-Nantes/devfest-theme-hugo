@@ -1,66 +1,71 @@
 {{ define "main" }}
 
-<div class="hero">
+<div class="speaker-hero">
+	<div class="inner">
 
-	<header>
-		<div class="speaker-img" style="background-image: url({{ .Page.Params.photo }});"></div>
-		<div>
-			<h1>{{ .Page.Params.name }}</h1>
+		<header>
+			<div class="speaker-img" style="background-image: url({{ .Page.Params.photo }});"></div>
+			<div>
+				<h1 class="hero-title">{{ .Page.Params.name }}</h1>
 
-			<ul class="socials">
-				{{ range .Page.Params.socials }}
+				<ul class="socials">
+					{{ range .Page.Params.socials }}
+					<li>
+						<a href="{{ .link }}" class="social" rel="noreferrer" target="_blank">
+							{{ partial "icon.html" .icon }}
+							{{ .name }}
+						</a>
+					</li>
+					{{ end }}
+				</ul>
+			</div>
+		</header>
+		<div class="description">
+			<ul class="talks">
+				{{ range where .Site.RegularPages "Params.speakers" "intersect" (slice .Page.Params.key) }}
 				<li>
-					<a href="{{ .link }}" class="social" rel="noreferrer" target="_blank">
-						{{ partial "icon.html" .icon }}
-						{{ .name }}
+					<a href="{{ .URL }}" class="visually-hidden">{{ .Title }}</a>
+					<a href="{{ .URL }}" class="talk tag-{{ anchorize (delimit .Params.tags "" ) }}">
+					<h2 class="talk-title text nostyle">{{ .Title }}</h2>
+					<div class="tags">
+	                    {{ range .Params.tags }}
+	                        {{ range first 1 (where $.Site.Data.categories "key" .) }}
+	                            <span>{{ .name }}</span>
+	                        {{ end }}
+	                    {{ end }}
+					</div>
+					<span class="language {{ anchorize .Params.language }}"></span>
 					</a>
 				</li>
 				{{ end }}
 			</ul>
 		</div>
-	</header>
-
-	<div class="description">
-
-		<ul class="talks">
-			{{ range where .Site.RegularPages "Params.speakers" "intersect" (slice .Page.Params.key) }}
-			<li>
-				<a href="{{ .URL }}" class="visually-hidden">{{ .Title }}</a>
-				<a href="{{ .URL }}" class="talk tag-{{ anchorize (delimit .Params.tags "" ) }}">
-				<div class="tags">
-                    {{ range .Params.tags }}
-                        {{ range first 1 (where $.Site.Data.categories "key" .) }}
-                            <span>{{ .name }}</span>
-                        {{ end }}
-                    {{ end }}
-				</div>
-				<span class="language {{ anchorize .Params.language }}"></span>
-				<h3 class="text">{{ .Title }}</h3>
-				</a>
-			</li>
-			{{ end }}
-		</ul>
 
 	</div>
 </div>
 
-<section class="speaker">
-
-	<header>
-		<h2>{{ .Page.Params.city }}</h2>
-		<figure class="speaker-company">
-			{{ if .Page.Params.companyLogo }}
-			<img src="{{ .Page.Params.companyLogo }}" alt="{{ .Page.Params.company }}">
-			{{ else }}			
-            <figcaption>{{ .Page.Params.company }}</figcaption>
-            {{ end }}
-		</figure>
-	</header>
-
-	<div class="bio">
-		{{ .Content }}
+<!-- <section class="description-talks white">
+	<div class="inner">
 	</div>
+</section> -->
 
+<section class="speaker">
+	<div class="inner">
+		<header>
+			<h2 class="speaker-city">{{ .Page.Params.city }}</h2>
+			<figure class="speaker-company">
+				{{ if .Page.Params.companyLogo }}
+				<img src="{{ .Page.Params.companyLogo }}" alt="{{ .Page.Params.company }}">
+				{{ else }}			
+	            <figcaption>{{ .Page.Params.company }}</figcaption>
+	            {{ end }}
+			</figure>
+		</header>
+
+		<div class="bio">
+			{{ .Content }}
+		</div>
+	</div>
 </section>
 
 

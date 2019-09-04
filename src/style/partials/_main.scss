@@ -40,7 +40,7 @@ body > main {
   }
 }
 
-.inner {
+.inner, .hero-inner {
   position: relative;
   width: 95%;
   max-width: 1260px;
@@ -50,7 +50,7 @@ body > main {
 }
 
 body:not(.home) {
-  h2 {
+  h2:not(.nostyle) {
     margin: 3rem 0 5rem;
     font-size: 4.4rem;
     font-weight: 700;
