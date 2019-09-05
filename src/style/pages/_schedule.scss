@@ -50,9 +50,12 @@
     }
   
     main > section.schedule {
-      margin: 1rem 2rem 2rem;
-      padding: var(--space-3) var(--container-margin);
-  
+      // margin: 1rem 2rem 2rem;
+      // padding: var(--space-3) var(--container-margin);
+      margin: 1rem auto 2rem;
+      padding: var(--space-3) 0;
+      width: 95%;
+      max-width: 1985px;
   
       .day {
         display: none;
@@ -137,12 +140,14 @@
         }
       }
 
-      // &.tag-web .speakers { background-color: #EA951B; }
-      // &.tag-discovery .speakers { background-color: #55B68D; }
-      // &.tag-cloud-devops .speakers { background-color: #438167; }
-      // &.tag-languages .speakers { background-color: #00398F; }
-      // &.tag-ux-ui .speakers { background-color: #871C45; }
-      // &.tag-security .speakers { background-color: #871C45; }
+      &.tag-web .speakers { background-color: #EA951B; }            // jaune
+      &.tag-discovery .speakers { background-color: #55B68D; }      // vert clair
+      &.tag-cloud-devops .speakers { background-color: #438167; }   // vert foncé
+      &.tag-security .speakers { background-color: #386be0; }       // bleu clair
+      &.tag-languages .speakers { background-color: #00398F; }      // bleu foncé
+      &.tag-ux-ui .speakers { background-color: #871C45; }          // bordeaux
+      &.tag-mobile-iot .speakers { background-color: #FF4B55; }     // rouge
+      &.tag-bigdata-ai .speakers { background-color: #C55515; }     // marron
   
       .slot {
         display: none;
@@ -185,6 +190,7 @@
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
+          flex-wrap: wrap;
   
           .complexity {
             display: inline;
@@ -201,7 +207,6 @@
           border: thin solid transparent;
           border-radius: var(--space-2);
           // background: var(--base);
-          background: var(--secondary);
           padding: 0;
           margin: 0;
           list-style: none;
@@ -443,3 +448,28 @@
       }
     }
   }
+
+@media (max-width: 1600px) {
+  .section.schedule .room h3 {
+    font-size: 1em;
+  }
+}
+@media (max-width: 1230px) {
+  .section.schedule .room h3 {
+    font-size: 1em;
+  }
+  .section.schedule main > section.schedule .day .session .speakers {
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center !important;
+  }
+  .section.schedule .session > a .speaker {
+    padding: 0;
+  }
+  .section.schedule .session > a .speaker .speaker-img {
+    margin: 0 4px !important;
+  }
+  .section.schedule main > section.schedule .day .session .speakers .speaker .speaker-name {
+    display: none;
+  }
+}
