@@ -1649,7 +1649,7 @@ form input {
 
 @supports (grid-template-columns: repeat(calc(var(--rooms) + 1), 1fr)) {
   .section.schedule main > section.schedule .day {
-    grid-template-columns: auto repeat(var(--rooms), 1fr);
+    grid-template-columns: auto repeat(var(--rooms), 15%);
     --dayStart: 60 * var(--dayStartH) + var(--dayStartM);
     --dayEnd: 60 * var(--dayEndH) + var(--dayEndM);
     grid-template-rows: 3em repeat(calc(var(--end) - 1), var(--base-grid-height, 6em));
