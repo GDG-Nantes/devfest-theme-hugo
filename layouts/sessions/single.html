@@ -18,7 +18,7 @@
 					{{ range where .Site.RegularPages "Params.key" "in" .Params.speakers }}
 					<li>
 						<a class="visually-hidden" aria-hidden="true" href="/speakers/{{ .Params.key }}">{{ .Params.name }}</a>
-						<a class="speaker" href="/speakers/{{ .Params.key }}">
+						<a class="speaker" href="/speakers/{{ .Params.key }}/">
 							<span class="speaker-info">
 								<div class="speaker-img" style="background-image: url({{ .Params.photo }});"></div>
 								<div class="speaker-meta">
