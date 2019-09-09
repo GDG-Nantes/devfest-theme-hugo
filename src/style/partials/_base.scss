@@ -55,6 +55,10 @@ a, a:visited {
   content: '🇬🇧';
 }
 
+.language.french::before {
+    content: '🇫🇷';
+}
+
 .visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
   position: absolute !important;
   height: 1px;
