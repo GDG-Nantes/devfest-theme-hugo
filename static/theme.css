@@ -1565,7 +1565,8 @@ form input {
     .section.schedule .session.tag-open > a, .section.schedule .session.tag-pause > a, .section.schedule .session.tag-lunch > a, .section.schedule .session.tag-party > a {
       box-shadow: none; }
     .section.schedule .session.tag-open h4, .section.schedule .session.tag-pause h4, .section.schedule .session.tag-lunch h4, .section.schedule .session.tag-party h4 {
-      color: white; }
+      color: white;
+      background: none; }
   .section.schedule .session.tag-open .tags, .section.schedule .session.tag-pause .tags, .section.schedule .session.tag-lunch .tags, .section.schedule .session.tag-party .tags, .section.schedule .session.tag-office-hours .tags {
     display: none; }
   .section.schedule .session.tag-web .speakers {
@@ -1756,7 +1757,7 @@ form input {
     .section.schedule main section.schedule .session.format-quickie {
       font-size: 18px; }
     .section.schedule main section.schedule .session a, .section.schedule main section.schedule .session h4 {
-      background: inherit;
+      background: none;
       text-shadow: none;
       box-shadow: none; }
   .section.schedule main > section.schedule .day .session .speakers.multi {

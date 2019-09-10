@@ -130,6 +130,7 @@
 
       h4 {
         color: white;
+        background: none;
         // text-shadow: 2px 1px 1px black;
       }
     }
@@ -435,7 +436,7 @@
     }
 
     a, h4 {
-      background: inherit;
+      background: none;
       text-shadow: none;
       box-shadow: none;
     }
