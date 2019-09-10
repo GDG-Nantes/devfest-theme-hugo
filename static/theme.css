@@ -1757,7 +1757,7 @@ form input {
     .section.schedule main section.schedule .session.format-quickie {
       font-size: 18px; }
     .section.schedule main section.schedule .session a, .section.schedule main section.schedule .session h4 {
-      background: none;
+      background: none !important;
       text-shadow: none;
       box-shadow: none; }
   .section.schedule main > section.schedule .day .session .speakers.multi {
