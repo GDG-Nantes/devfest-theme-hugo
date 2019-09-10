@@ -127,6 +127,9 @@ a, a:visited {
 .language.english::before {
   content: '🇬🇧'; }
 
+.language.french::before {
+  content: '🇫🇷'; }
+
 .visually-hidden {
   /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
   position: absolute !important;
@@ -994,8 +997,8 @@ a.social {
 section .tags {
   padding: var(--space-1);
   border-radius: var(--space-2);
-  background: rgba(0, 0, 0, 0.05);
-  border: thin solid var(--darken-2); }
+  border: thin solid var(--darken-2);
+  font-size: 1.3rem; }
 
 .tag-open {
   background-image: url("/images/backgrounds/open.jpg"); }
@@ -1690,7 +1693,9 @@ form input {
         .section.schedule main > section.schedule .day .session .speakers.multi .speaker .speaker-img {
           margin-right: var(--space-1); }
         .section.schedule main > section.schedule .day .session .speakers.multi .speaker .speaker-name {
-          display: none; }
+          display: none;
+          margin-left: 7px;
+          font-size: 1.2rem; }
         .section.schedule main > section.schedule .day .session .speakers.multi .speaker:focus .speaker-name, .section.schedule main > section.schedule .day .session .speakers.multi .speaker:hover .speaker-name {
           display: block; }
   .section.schedule main > section.schedule.horizontal .day {
@@ -1775,7 +1780,19 @@ form input {
   .section.schedule .session > a .speaker .speaker-img {
     margin: 0 4px !important; }
   .section.schedule main > section.schedule .day .session .speakers .speaker .speaker-name {
-    display: none; } }
+    display: none !important; } }
+
+.section.schedule .session > a h4.schedule-xl {
+  display: flex; }
+
+.section.schedule .session > a h4.schedule-xs {
+  display: none; }
+
+@media (max-width: 1460px) {
+  .section.schedule .session > a h4.schedule-xl {
+    display: none; }
+  .section.schedule .session > a h4.schedule-xs {
+    display: flex; } }
 
 .section.speakers .inner {
   max-width: 1900px; }

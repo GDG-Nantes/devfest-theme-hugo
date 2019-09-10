@@ -1,10 +1,12 @@
 <a href="{{ .Permalink }}">
-    <h4 title="{{ .Title }}">
+    <h4 class="schedule-xl" title="{{ .Title }}">
         {{ .Title }}
         <span class="language {{ anchorize .Params.language }}"></span>
     </h4>
-
-    <hr>
+    <h4 class="schedule-xs" title="{{ .Title }}">
+        {{ printf "%.56s ..." .Title }}
+        <span class="language {{ anchorize .Params.language }}"></span>
+    </h4>
 
     <div class="info">
         {{ if .Params.complexity }}

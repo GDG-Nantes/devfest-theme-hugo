@@ -326,6 +326,8 @@
 
           .speaker-name {
             display: none;
+            margin-left: 7px;
+            font-size: 1.2rem;
           }
 
           &:focus, &:hover {
@@ -471,6 +473,16 @@
     margin: 0 4px !important;
   }
   .section.schedule main > section.schedule .day .session .speakers .speaker .speaker-name {
-    display: none;
+    display: none !important;
   }
+}
+
+// responsive
+
+.section.schedule .session > a h4.schedule-xl { display: flex; }
+.section.schedule .session > a h4.schedule-xs { display: none; }
+
+@media (max-width: 1460px) {
+  .section.schedule .session > a h4.schedule-xl { display: none; }
+  .section.schedule .session > a h4.schedule-xs { display: flex; }
 }
