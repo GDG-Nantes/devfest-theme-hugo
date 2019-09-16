@@ -4,7 +4,7 @@
 	<div class="info">
 		<figure class="speaker-company">   
             {{ if .Params.companyLogo }}
-            <img src="{{ .Params.companyLogo }}" alt="">
+            <img src="{{ .Params.companyLogo }}" alt="{{ .Params.company }}">
             {{ else }}
             <figcaption>{{ .Params.company }}</figcaption>
             {{ end }}
