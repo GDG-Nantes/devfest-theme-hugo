@@ -321,6 +321,8 @@
         justify-content: space-evenly;
 
         .speaker {
+          padding: 0 !important;
+          
           .speaker-img {
             margin-right: var(--space-1);
           }
