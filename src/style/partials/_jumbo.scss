@@ -1,5 +1,6 @@
 .jumbo {
   position: relative;
+  padding-bottom: 60px;
   min-height: calc(100vh - var(--toolbar-height));
   max-width: 100%;
   display: flex;
@@ -77,6 +78,8 @@
 
       .btn {
         margin-top: 30px;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
       }
     }
   }
@@ -95,7 +98,7 @@
   .scroll-down {
     position: absolute;
     bottom: 3.2rem;
-    left: 50vw;
+    left: 50%;
     transform: translateX(-50%);
     transform-origin: center center;
     color: var(--base, white);
