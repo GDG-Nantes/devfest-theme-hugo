@@ -46,17 +46,23 @@ other = "blog"
 [footer_follow_us]
 other = "Suivez nous sur"
 
+[footer_legal_mentions]
+other = "Mentions Légales"
+
 [footer_about]
 other = "A propos"
 
 [footer_previous_edition]
-other = "Précédente édition"
+other = "Précédentes éditions"
 
-[footer_become_partners]
-other = "Devenir partenaire"
+[footer_for_partners]
+other = "Pour les sponsors"
 
-[footer_become_partners_label]
-other = "Proposition de partenariat"
+[footer_partnership_kit_label]
+other = "Kit Sponsor"
+
+[footer_media_kit_label]
+other = "Kit Media"
 
 [footer_coc]
 other = "Code de conduite"
@@ -71,4 +77,4 @@ other = "Newsletter"
 other = "Pas de spam, juste les dernières infos !"
 
 [subscribe_action]
-other = "Souscrire"
+other = "Souscrire à la newsletter"

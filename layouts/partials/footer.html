@@ -1,6 +1,5 @@
 <footer>
-	<div class="bottom-content">
-
+	<div class="inner">
 		<div class="footer-header">
 			<div class="share">
 				<div class="header">{{ i18n "footer_share" }}</div>
@@ -10,6 +9,7 @@
 						{{ $url := .URL | relLangURL }}
 						{{ partial "social-sharer.html" (dict "context" . "url" $url "name" .name) }}
 						{{ end }}
+					</li>
 				</ul>
 			</div>
 			<div class="blog">
@@ -22,7 +22,7 @@
 				<ul class="social-list">
 					{{ range .Site.Data.footer.follow }}
 					<li>
-						<a href="{{ .url }}" class="social" rel="noopener noreferrer" target="_blank">
+						<a href="{{ .url }}" class="social" rel="noreferrer" target="_blank">
 							{{ partial "icon.html" .name }}
 							{{ .name }}
 						</a>
@@ -31,10 +31,12 @@
 				</ul>
 			</div>
 			<div class="email">
-				<a href="mailto:{{ .Site.Params.email }}">
-					{{ partial "icon.html" "email" }}
-					{{- .Site.Params.email -}}
-				</a>
+				<div class="header">
+					<a href="mailto:{{ .Site.Params.email }}">
+						{{ partial "icon.html" "email" }}
+						{{- .Site.Params.email -}}
+					</a>
+				</div>
 			</div>
 		</div>
 
@@ -48,7 +50,7 @@
 				<ul>
 					{{ range .links }}
 					<li>
-						<a href="{{ .url }}" {{ if .newTab }}target="_blank" rel="noopener noreferrer" {{end}}>
+						<a href="{{ .url | relLangURL }}" {{ if .newTab }}target="_blank" rel="noopener" {{end}}>
 							{{ if .nameKey }}
 							{{ i18n .nameKey }}
 							{{ else }}
@@ -65,8 +67,7 @@
 			<section class="subscribe">
 				<div class="header">{{ i18n "newsletter" }}</div>
 				<p>{{ i18n "subscribe_notice" }}</p>
-				<a href="{{ .Site.Params.subscriptionUrl }}"
-				   class="btn" rel="noopener noreferrer" target="_blank">
+				<a href="{{ .Site.Params.subscriptionUrl }}" class="btn" rel="noreferrer" target="_blank">
 					{{ partial "icon.html" "subscribe" }}
 					{{- i18n "subscribe_action" -}}
 				</a>
@@ -80,8 +81,7 @@
 			{{ if .Site.Params.logos.footer }}
 			<img src="{{ .Site.Params.logos.footer }}" alt="{{ .Site.Title }}">
 			{{ end }}
-			<div>{{ emojify .Site.Params.copyright }}</div>
+			<div class="footer-baseline">{{ emojify .Site.Params.copyright }}</div>
 		</div>
-
 	</div>
 </footer>
