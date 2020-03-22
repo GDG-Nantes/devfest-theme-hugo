@@ -1,14 +1,15 @@
 #TableOfContents ul {
   padding-left: 1em;
   list-style: none;
+  color: var(--white-txt);
 
   li {
-    font-size: 1rem;
+    font-size: 1.6rem;
     margin: var(--space-1) 0;
     padding: var(--space-1) 0;
 
     a {
-      color: var(--toc-text);
+      // color: var(--primary-txt);
       text-decoration: none;
 
       &:focus, &:hover {
@@ -21,5 +22,7 @@
 }
 
 #TableOfContents > ul > li > ul > li > a {
+  display: inline-block;
+  margin-top: 1.5rem;
   font-weight: bold ;
 }

@@ -1,6 +1,12 @@
 /* FAQ */
-.page.faq, .page.frfaq {
+.page.faq, .page.fr-faq {
 
+  #TableOfContents ul {
+    text-align: left;
+  }
+  .tableofcontents {
+    display: block;
+  }
 
   @include mq($until: md) {
     .hero .description {
@@ -8,29 +14,33 @@
     }
   }
 
-  .hero .description {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  main h1, #TableOfContents, main .content {
-    max-width: var(--theJdrSize);
-    margin: 0 auto;
-  }
-
-  main .content {
-    margin-top: 1rem;
-  }
-
   .content {
-
     h1, h2, h3, h4, h5, h6 {
-      color: var(--toc-text);
+      color: var(--primary-txt);     
+    }
+    h2 {
+      color: var(--secondary-txt);
+      margin-top: 8rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      color: var(--secondary);
+      font-weight: bold;
+      margin-left: 0;
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      font-size: 2.5rem;
+      border-top: var(--primarydarker) 2px solid;
+    }
+    a {
+      color: var(--primary-txt);
+      text-decoration: underline;
     }
 
-    h3, h4, h5, h6, & > ul, & > ol, & > p {
-      margin-left: calc(var(--container-margin) - 2rem);
-    }
+    // h3, h4, h5, h6, & > ul, & > ol, & > p {
+    //   margin-left: calc(var(--container-margin)/2 - 3.2rem);
+    // }
 
     li {
       line-height: 1.5;
@@ -62,13 +72,7 @@
 
     }
   }
+
 }
 
 
-@include mq($until: xl) {
-  .page.faq, .page.fr-faq {
-    .content {
-      padding: 0 .5em;
-    }
-  }
-}

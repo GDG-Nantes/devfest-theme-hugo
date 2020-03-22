@@ -1,15 +1,21 @@
 .section.schedule {
+  main {
+    padding-bottom: 10rem;
+  }
 
   .hero {
+  }
+  .hero-desc {
     .description {
       display: flex;
+      justify-content: center;
 
       p + p {
         margin-left: 1em;
       }
     }
   }
-
+  
   nav.day-tabs {
     font-size: 2em;
     display: flex;
@@ -26,18 +32,30 @@
 
       color: var(--primary);
       background-color: var(--primary-txt);
+      opacity: 0.5;
+      transition: all 0.15s;
+
+      &:hover, &:focus {
+        box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
+        transition: all 0.15s;
+      }        
 
       &.active {
-        background-color: var(--primary);
-        color: var(--primary-txt);
+        background-color: var(--primary-txt);
+        color: var(--primary);
+        opacity: 1;
+        transition: all 0.15s;
       }
     }
   }
-
+  
   main > section.schedule {
-    margin: 1rem 2rem 2rem;
-    padding: var(--space-3) var(--container-margin);
-
+    // margin: 1rem 2rem 2rem;
+    // padding: var(--space-3) var(--container-margin);
+    margin: 1rem auto 2rem;
+    padding: var(--space-3) 0;
+    width: 95%;
+    max-width: 1985px;
 
     .day {
       display: none;
@@ -47,7 +65,7 @@
       }
     }
   }
-
+  
   h2 {
     display: none;
   }
@@ -57,7 +75,7 @@
     justify-content: center;
     align-items: flex-start;
     color: var(--primary);
-    background-color: var(--primary-txt);
+    // background-color: var(--primary-txt);
     margin: .125em;
 
     h3 {
@@ -65,23 +83,15 @@
       border-radius: var(--space-3);
       background-color: var(--primary-txt);
 
-      font-size: 1.25em;
+      font-size: 1.5em;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100%;
-      padding: var(--space-3);
-      height: 3em;
-      font-weight: bold;
-
-      small {
-        font-size: .75em;
-        font-weight: normal;
-      }
+      height: 1.75em;
     }
   }
-
+  
   .start, .slot {
     font-size: 2em;
     color: var(--base-secondary-text);
@@ -105,7 +115,9 @@
   .session {
     position: relative;
     margin: 1rem 1rem 1rem 5ch;
-    border-radius: var(--space-2);
+    // border-radius: var(--space-2);
+    background-color: var(--white) !important;
+    color: black;
 
     &.tag-open, &.tag-pause, &.tag-lunch, &.tag-party {
       background-position: center center;
@@ -118,7 +130,8 @@
 
       h4 {
         color: white;
-        text-shadow: 2px 1px 1px black;
+        background: none;
+        // text-shadow: 2px 1px 1px black;
       }
     }
 
@@ -128,11 +141,21 @@
       }
     }
 
+    &.tag-web .speakers { background-color: #EA951B; }            // jaune
+    &.tag-discovery .speakers { background-color: #55B68D; }      // vert clair
+    &.tag-cloud-devops .speakers { background-color: #438167; }   // vert foncé
+    &.tag-security .speakers { background-color: #386be0; }       // bleu clair
+    &.tag-languages .speakers { background-color: #00398F; }      // bleu foncé
+    &.tag-ux-ui .speakers { background-color: #871C45; }          // bordeaux
+    &.tag-mobile-iot .speakers { background-color: #FF4B55; }     // rouge
+    &.tag-bigdata-ai .speakers { background-color: #C55515; }     // marron
+
     .slot {
       display: none;
     }
 
     & > a {
+      padding: 5px 10px;
       border: thin solid var(--darken-1);
       box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
       transition: box-shadow var(--animation);
@@ -152,7 +175,7 @@
       }
 
       h4 {
-        text-shadow: 2px 1px 1px white;
+        // text-shadow: 2px 1px 1px white;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -160,37 +183,41 @@
 
       hr {
         width: calc(100% - var(--space-3));
-        margin: 0 auto;
+        margin: 3px auto 8px;
       }
 
       .info {
         flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
 
-
-        .complexity, .video, .presentation {
-          float: left;
-          clear: left;
+        .complexity {
           display: inline;
-          max-height: 1.5em;
+          max-height: 1em;
 
           svg {
             height: 1.5em;
             max-width: 1.5em;
           }
         }
-        .tags {
-          float: right;
-        }
       }
 
       .speakers {
         border: thin solid transparent;
-        border-top: thin solid var(--darken-1);
         border-radius: var(--space-2);
-        background: var(--base);
+        // background: var(--base);
         padding: 0;
         margin: 0;
         list-style: none;
+        color: white;
+        min-height: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .speaker + .speaker {
+        // border-top: thin solid var(--darken-1);
       }
 
       .speaker {
@@ -225,14 +252,15 @@
     }
   }
 }
-
+  
 @supports (grid-template-columns: repeat(calc(var(--rooms) + 1), 1fr)) {
   .section.schedule main > section.schedule .day {
 
-    grid-template-columns: auto repeat(var(--rooms), 1fr);
+    // grid-template-columns: auto repeat(var(--rooms), 1fr);
+    grid-template-columns: auto repeat(var(--rooms), 15%);
     --dayStart: 60 * var(--dayStartH) + var(--dayStartM);
     --dayEnd: 60 * var(--dayEndH) + var(--dayEndM);
-    grid-template-rows: 4em repeat(calc(var(--end) - 1), var(--base-grid-height, 6em));
+    grid-template-rows: 3em repeat(calc(var(--end) - 1), var(--base-grid-height, 6em));
     grid-gap: .125em .25em;
 
     &:target {
@@ -244,23 +272,24 @@
       grid-column: 1 / 2;
       --start: calc(1 + var(--row-start));
       --end: calc(1 + var(--row-end));
-      grid-row: var(--start) / var(--end);
-
+      grid-row: var(--start) / var(--end);  
       background-color: var(--color-hero);
+      color: var(--secondary);
+      padding: 0 2px;
     }
 
     .room {
       grid-column: calc(var(--room) + 2);
       grid-row: 1 / -1;
 
-      &.even {
-        background-color: var(--color-hero);
-      }
+      // &.even {
+      //   background-color: var(--color-hero);
+      // }
     }
 
     .session {
       margin: .125em;
-      z-index: 2;
+      z-index: 1;
 
       --start: calc(1 + var(--row-start));
       --end: calc(1 + var(--row-end));
@@ -268,29 +297,19 @@
       grid-column: calc(var(--room) + 2);
       grid-row: var(--start) / var(--end);
 
-      &.tag-pause {
-        z-index: 0;
-        grid-column: 2 / -1;
-      }
-
       &.tag-open, &.tag-lunch, &.tag-party {
         h4 {
           font-size: 2em;
         }
       }
 
-      &.tag-open, &.tag-lunch, &.tag-party {
+      &.tag-open, &.tag-pause, &.tag-lunch, &.tag-party {
         grid-column: 2 / -1;
-        z-index: 1;
+        z-index: 0;
       }
 
       &.tag-office-hours {
         margin: var(--space-3);
-
-        .speakers.multi {
-          padding-top: .125em;
-          flex-wrap: wrap;
-        }
       }
 
       .start {
@@ -302,25 +321,16 @@
         justify-content: space-evenly;
 
         .speaker {
-          position: relative;
-          border-top: none;
-
+          padding: 0 !important;
+          
           .speaker-img {
             margin-right: var(--space-1);
           }
 
           .speaker-name {
-            background: var(--base);
-            z-index: 100;
-            border-radius: var(--space-2);
-            border: thin solid var(--darken-1);
-            box-shadow: 1px 1px var(--space-1) var(--darken-1);
-            padding: var(--space-1);
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform: translateX(50%) translateY(-75%);
             display: none;
+            margin-left: 7px;
+            font-size: 1.2rem;
           }
 
           &:focus, &:hover {
@@ -339,7 +349,7 @@
     grid-template-rows: auto repeat(var(--rooms), 1fr);
     --dayStart: 60 * var(--dayStartH) + var(--dayStartM);
     --dayEnd: 60 * var(--dayEndH) + var(--dayEndM);
-    grid-template-columns: 7em repeat(calc(var(--end) - 1), var(--base-grid-height, 6em));
+    grid-template-columns: 6em repeat(calc(var(--end) - 1), var(--base-grid-height, 6em));
     grid-auto-flow: dense;
 
     .slot {
@@ -358,10 +368,9 @@
       justify-content: flex-start;
 
       h3 {
-        padding: .25em;
         height: 100%;
-        width: 5.5em;
-        max-width: 5.5em;
+        width: auto;
+        max-width: 4em;
         text-align: center;
         text-orientation: upright;
       }
@@ -383,10 +392,9 @@
       }
     }
   }
-
 }
-
-
+  
+ 
 @include mq($until: xxl) {
   .section.schedule main > section.schedule {
     --container-margin: 0em;
@@ -395,13 +403,9 @@
 
 @include mq($until: lg) {
   .section.schedule {
-    main > section.schedule .day .session {
+    main > section.schedule {
       --container-margin: 0em;
-      margin: 1rem .5rem 2rem 2.25em;
-
-      .start {
-        display: block;
-      }
+      margin: 1rem .5rem 2rem 1.5em;
     }
   }
 
@@ -434,7 +438,7 @@
     }
 
     a, h4 {
-      background: inherit;
+      background: none !important;
       text-shadow: none;
       box-shadow: none;
     }
@@ -445,13 +449,43 @@
 
     .speaker {
       .speaker-name {
-        position: relative;
-        transform: none;
-        border: none;
         display: block;
-        box-shadow: none;
       }
     }
   }
+}
 
+@media (max-width: 1600px) {
+  .section.schedule .room h3 {
+    font-size: 1em;
+  }
+}
+@media (max-width: 1230px) {
+  .section.schedule .room h3 {
+    font-size: 1em;
+  }
+  .section.schedule main > section.schedule .day .session .speakers {
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center !important;
+  }
+  .section.schedule .session > a .speaker {
+    padding: 0;
+  }
+  .section.schedule .session > a .speaker .speaker-img {
+    margin: 0 4px !important;
+  }
+  .section.schedule main > section.schedule .day .session .speakers .speaker .speaker-name {
+    display: none !important;
+  }
+}
+
+// responsive
+
+.section.schedule .session > a h4.schedule-xl { display: flex; }
+.section.schedule .session > a h4.schedule-xs { display: none; }
+
+@media (max-width: 1460px) {
+  .section.schedule .session > a h4.schedule-xl { display: none; }
+  .section.schedule .session > a h4.schedule-xs { display: flex; }
 }

@@ -1,0 +1,32 @@
+html {
+	// better font rendering
+	letter-spacing: 0;
+	-webkit-font-feature-settings: "liga";
+	-moz-font-feature-settings: "liga=1";
+	-moz-font-feature-settings: "liga";
+	-ms-font-feature-settings: "liga" 1;
+	-o-font-feature-settings: "liga";
+	font-feature-settings: "liga";
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	// responsive font
+	font-size: 62.5%;
+	@include mq($until: xl) {
+		font-size: 60%;
+	}
+	@include mq($until: lg) {
+		font-size: 58%;
+	}
+	@include mq($until: md) {
+		font-size: 57%;
+	}
+	@include mq($until: sm) {
+		font-size: 54%;
+	}
+}
+body {
+	font-size: 1.6rem;
+	line-height: 1.5;
+}

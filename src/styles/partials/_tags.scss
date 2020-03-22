@@ -18,7 +18,7 @@
   background-color: var(--iot);
 }
 
-.tag-cloud-infra {
+.tag-cloud {
   background-color: var(--cloud);
 }
 
@@ -30,14 +30,6 @@
   background-color: var(--wtf);
 }
 
-.tag-keynote {
-  background-color: var(--keynote);
-}
-
-.tag-office-hours {
-  background-color: var(--office-hours);
-}
-
 .tag-general {
   background-color: var(--general);
 }
@@ -45,24 +37,34 @@
 section .tags {
   padding: var(--space-1);
   border-radius: var(--space-2);
-  background: var(--darken-1);
+  // background: var(--darken-1);
+  // background: rgba(0, 0, 0, 0.05);
   border: thin solid var(--darken-2);
-  text-shadow: var(--extruded-light);
+  // text-shadow: var(--extruded-light);
+  font-size: 1.3rem;
 }
 
 
 .tag-open {
-  background-image: url('/images/backgrounds/open.jpg');
+ background-image: url('/images/backgrounds/open.jpg');
 }
 
 .tag-pause {
-  background-image: url('/images/backgrounds/pause.jpg');
+ background-image: url('/images/backgrounds/pause.jpg');
 }
 
 .tag-lunch {
-  background-image: url('/images/backgrounds/lunch.jpg');
+ background-image: url('/images/backgrounds/lunch.jpg');
 }
 
 .tag-party {
-  background-image: url('/images/backgrounds/party.jpg');
+ background-image: url('/images/backgrounds/party.jpg');
+}
+
+.tag-keynote {
+ background: var(--general);
+}
+
+.tag-office-hours {
+ background: var(--general);
 }

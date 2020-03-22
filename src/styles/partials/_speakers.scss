@@ -10,21 +10,30 @@
     .info {
       display: flex;
       flex-direction: column;
+      flex: 1;
       align-items: center;
+      text-align: center;
+      color: var(--tertiary);
     }
 
     .speaker-img {
-      --size: 8rem;
-      height: var(--size, 8rem);
-      min-width: var(--size, 8rem);
+      --size: 12.8rem;
+      height: var(--size, 12.8rem);
+      min-width: var(--size, 12.8rem);
       border-radius: 100%;
       background-size: cover;
       margin: var(--space-2);
     }
 
     .speaker-company {
+      font-style: italic;
+      font-weight: 200;
+      opacity: .8;
+      // margin: var(--space-1);
+      margin: 1.7rem 0 1.2rem;
+      
       img {
-        max-height: 2rem;
+        max-height: 3.2rem;
         margin: var(--space-1);
       }
       figcaption {
@@ -35,13 +44,15 @@
     .speaker-name {
       font-weight: 600;
       margin: var(--space-1);
+      text-transform: uppercase;
+      color: var(--secondary);
+
     }
 
-    .speaker-company {
-      font-weight: 200;
-      opacity: .8;
-      margin: var(--space-1);
+    .speaker-country {
+      color: var(--primary);
+      font-size: 1.3rem;
+      line-height: 1.4;
     }
-
   }
 }

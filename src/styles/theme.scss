@@ -3,6 +3,7 @@
 @import '../../node_modules/sass-mq/mq';
 
 @import "partials/base";
+@import "partials/typo";
 @import "partials/header";
 @import "partials/main";
 @import "partials/footer";
@@ -21,10 +22,10 @@
 @import "partials/album";
 
 @import "pages/home";
+@import "pages/attending";
 @import "pages/sessions";
 @import "pages/session";
 @import "pages/partners";
-@import "pages/partner";
 @import "pages/schedule";
 @import "pages/speakers";
 @import "pages/speaker";

@@ -1,7 +1,7 @@
-body > main {
+body>main {
   flex-grow: 1;
 
-  & > section {
+  &>section {
     margin: 2rem var(--container-margin);
     padding-left: 0;
     padding-right: 0;
@@ -20,5 +20,23 @@ body > main {
       color: var(--accent-txt);
     }
 
+  }
+}
+
+body:not(.home) {
+  h2:not(.nostyle) {
+    margin: 3rem 0 5rem;
+    font-size: 4.4rem;
+    font-weight: 700;
+  }
+}
+
+body {
+  section {
+    padding: 6rem 0 6.5rem;
+  }
+
+  .tableofcontents {
+    display: none;
   }
 }

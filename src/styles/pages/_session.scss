@@ -1,7 +1,11 @@
-
 .talk {
-  margin: 2rem auto 0;
-  max-width: var(--block-text-max-width);
+    
+  .complexity, .type {
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--secondary);
+    font-style: italic;
+  }
 
   .complexity::before {
     content: 'Niveau : ';
@@ -16,43 +20,83 @@
     content: ' (' var(--duration, '') ' min.)';
   }
 
-  .speakers {
-    .speaker {
-      display: flex;
-      align-items: center;
-      padding: var(--space-1) var(--space-3);
-      background-color: var(--base);
-      --img-size: 2rem;
+}
 
-      .speaker-img {
-        --img-size: 3rem;
-        height: var(--img-size, 3rem);
-        min-width: var(--img-size, 3rem);
-        border-radius: 100%;
-        background-size: cover;
-        margin-right: var(--space-4);
-      }
+.page.sessions {
 
-      .info {
+  .talk-hero {
+    position: relative;
+    display: flex;
+    width: 100%;
+    // height: 50vh;
+    min-height: 500px;
+    // max-height: 750px;
+    background-color: var(--tertiary);
+    border-bottom: var(--secondary) 5px solid;
+
+    header {
+      background-color: transparent !important;
+    }
+    h1 {
+        margin: 0;
+        padding: 0;
+        margin-top: 15px;
+        color: var(--secondary);
+        font-size: 4.4rem;
+        font-weight: 700;
+    }
+    .tags {
+      background: none;
+      border: none;
+    }
+    .speakers {
+      margin-top: 5rem;
+
+      .speaker {
         display: flex;
-        flex-direction: column;
-      }
+        align-items: center;
+        padding: var(--space-1) var(--space-3);
+        --img-size: 3.2rem;
 
-      .speaker-company {
-        flex-grow: 1;
-        text-align: right;
-        margin-left: var(--space-3);
-      }
+        .speaker-img {
+          --img-size: 4.8rem;
+          height: var(--img-size, 4.8rem);
+          min-width: var(--img-size, 4.8rem);
+          border-radius: 100%;
+          background-size: cover;
+          margin-right: var(--space-4);
+        }
 
-      p {
-        max-width: 320px;
+        .speaker-name {
+          text-transform: uppercase;
+        }
+
+        .speaker-country {
+          font-size: 1.3rem;
+          font-style: italic;
+        }
+
+        .info {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .speaker-company {
+          img {
+            height: 3.2rem;
+          }
+
+          figcaption {
+            display: none;
+          }
+        }
+
+        p {
+          max-width: 320px;
+        }
       }
     }
   }
-}
-
-
-.page.sessions {
 
   .talk {
 
@@ -73,108 +117,102 @@
     }
 
     .detail {
-      margin: var(--space-2) 0;
+      // margin: var(--space-2) 0;
+      margin: 3rem 0 5rem;
       padding: var(--space-2) 0;
-      border-top: thin solid var(--darken-1);
-      border-bottom: thin solid var(--darken-1);
-      //display: flex;
+      // border-top: thin solid var(--darken-1);
+      // border-bottom: thin solid var(--darken-1);
+      display: flex;
     }
 
     .content {
       margin: var(--space-4) 0;
       flex: 1 1 auto;
+    }
 
-      p {
-        line-height: 1.5;
-        font-size: 110%;
+    .media {
+      grid-column: 1 / -1;
+
+      a:not(.btn) {
+        padding: var(--space-3) 0;
+        font-size: 1.6rem;
       }
 
-      blockquote.twitter-tweet {
-        border: thin solid var(--darken-2);
-        border-radius: .5em;
-        padding: .75em;
-
-         p  {
-           margin: 0;
-         }
+      .social-slides {
+        width: auto;
+        color: inherit;
       }
     }
 
-    .speakers .speaker {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      grid-template-rows: 1fr auto auto;
+  }
+  .talk-hero {
 
-      .speaker-img {
-        grid-row: 1 / -1;
-        align-self: center;
-        --img-size: 6rem;
-        height: var(--img-size, 3rem);
-        min-width: var(--img-size, 3rem);
-        border-radius: 100%;
-        background-size: cover;
-        margin-right: var(--space-4);
-      }
-
-      .speaker-company {
-        text-align: left;
-        margin-left: 0;
-      }
+    .inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-
 
     .speakers {
-      //flex: 0 1 auto;
-      float: right;
-      margin: var(--space-1) var(--space-3);
+      flex: 0 1 auto;
       list-style: none;
       padding: 0;
       align-self: start;
       border-radius: var(--space-2);
 
       .speaker {
-        padding: var(--space-3);
         margin: var(--space-4) 0;
-        border: thin solid var(--darken-1);
-        box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
-        transition: box-shadow var(--animation);
-        border-radius: var(--space-2);
+        // border: thin solid var(--darken-1);
+        // box-shadow: var(--space-1) var(--space-1) var(--space-2) var(--darken-2);
+        // transition: box-shadow var(--animation);
+        // border-radius: var(--space-2);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
-        &:hover, &:focus {
-          box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
-        }
+        // &:hover, &:focus {
+        //   box-shadow: var(--space-2) var(--space-2) var(--space-2) var(--darken-3);
+        // }
 
         text-decoration: none;
         color: inherit;
 
+        .speaker-info, .speaker-meta {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .speaker-info {
+          flex-wrap: wrap;
+          flex-direction: row;
+          background-color: var(--white);
+          color: var(--primary);
+          border-radius: 2px;
+          padding: 15px 25px;
+        }
+        .speaker-meta {
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        p {
+          grid-column: 1 / -1;
+        }
+
+        figure {
+          grid-column: 3;
+          padding: var(--space-2);
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          img {
+            order: 2;
+          }
+        }
       }
     }
-
-    .media {
-      grid-column: 1 / -1;
-
-      a {
-        padding: var(--space-3) 0;
-        font-size: 1rem;
-      }
-
-      .social-slides {
-        width: auto;
-        margin-top: 1em;
-        background: var(--primary);
-        color: var(--primary-txt);
-        font-size: 1.25em;
-        padding: .125em .75em;
-        border-radius: 1em;
-        &:focus, &:active , &:hover {
-          box-shadow: .0625em .0625em .125em var(--darken-3);
-        }
-        svg {
-          max-width: 2ch;
-        }
-      }
-    }
-
   }
 }
 
@@ -183,8 +221,5 @@
     .talk {
       grid-template-columns: 1fr;
     }
-  }
-  .page.sessions .talk .speakers {
-    float: unset;
   }
 }
