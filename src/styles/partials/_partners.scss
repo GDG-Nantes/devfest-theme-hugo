@@ -20,6 +20,7 @@
 
   .partner {
     padding: var(--space-3);
+    border-radius: 2px;
     height: 100%;
     width: 100%;
 
@@ -27,14 +28,14 @@
     align-items: stretch;
     justify-content: center;
 
-    background-color: ghostwhite;
+    filter: grayscale(100%) sepia(1) saturate(10000%) hue-rotate(560deg) brightness(0.5);
 
-    box-shadow: var(--box-shadow-1);
     transition: box-shadow var(--animation);
     cursor: pointer;
     color: transparent;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       box-shadow: var(--box-shadow-2);
     }
 
@@ -45,7 +46,7 @@
       justify-content: center;
       align-items: center;
 
-      & > * {
+      &>* {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
@@ -61,7 +62,8 @@
   flex-basis: 320px;
 }
 
-.partners-group.partner-gold ul li, .partners-group.partner-startup ul li {
+.partners-group.partner-gold ul li,
+.partners-group.partner-startup ul li {
   height: var(--partner-gold-height);
   flex-basis: 200px;
 }
@@ -70,54 +72,17 @@
 /* Partner fancy name */
 
 .partners-group .fancy {
-  line-height: 0.5;
   text-align: center;
-  color: var(--base-secondary-text);
+  font-size: 1.5rem;
+  font-family: var(--font-family);
 
   span {
+    border-radius: 2px;
+    color: var(--primary-txt);
+    background-color: var(--primary);
     display: inline-block;
     position: relative;
     text-transform: capitalize;
-
-    &:before, &:after {
-      top: 40%;
-      content: "";
-      position: absolute;
-      height: 5px;
-      width: 140%;
-      max-width: 25vw;
-    }
-
-    &:before {
-      right: 100%;
-      margin-right: 15px;
-    }
-
-    &:after {
-      left: 100%;
-      margin-left: 15px;
-    }
+    padding: 2px 14px;
   }
 }
-
-
-.partners-group.partner-platinium .fancy {
-  font-size: 1.5em;
-  color: var(--color-platium);
-
-  span:before, span:after {
-    border-bottom: 1px solid currentColor;
-    border-top: 1px solid currentColor;
-  }
-}
-
-.partners-group.partner-gold .fancy {
-  font-size: 1.33em;
-  color: var(--color-gold);
-
-  span:before, span:after {
-    top: 20%;
-    border-bottom: 1px solid currentColor;
-  }
-}
-

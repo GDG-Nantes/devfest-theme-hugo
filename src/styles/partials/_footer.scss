@@ -9,6 +9,10 @@ body>footer {
     max-width: var(--theJdrSize);
     margin: 0 auto;
 
+    hr {
+      border-color: var(--color-platium);
+    }
+
     a:hover {
       text-decoration: underline;
     }
@@ -51,7 +55,7 @@ body>footer {
 
     // Header
     .footer-header {
-      color: var(--secondary);
+      color: var(--footer-fg);
       font-weight: 500;
       text-transform: uppercase;
 
@@ -114,7 +118,6 @@ body>footer {
 
         a.btn {
           background-color: var(--secondary);
-          color: var(--color-hero);
           font-weight: 500;
         }
       }

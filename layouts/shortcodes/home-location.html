@@ -1,5 +1,5 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
-<section class="location">
+<section class="location {{ .Get "class" }}">
 
 	{{ partial "picture" (dict "img" (.Get "image") "class" "map" "widths" (slice 540 720 960 1140)) }}
 
@@ -15,7 +15,7 @@
 
 			<a href="https://www.google.com/maps/dir/?api=1&destination={{ .Get "latitude" }},{{ .Get "longitude" }}"
 				class="btn btn-icon-only" target="_blank" rel="noopener noreferrer"
-			   aria-label="{{ i18n "home_location_direction" }}">
+				aria-label="{{ i18n "home_location_direction" }}">
 				{{ partial "icon.html" "direction" }}
 			</a>
 

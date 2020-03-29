@@ -18,12 +18,12 @@ html {
 }
 
 body {
-  background: var(--base);
-  color: var(--base-text);
-  margin: var(--toolbar-height) 0 0;
+  background: var(--primary);
+  color: var(--primary-txt);
+  margin: 0 0;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - var(--toolbar-height));
+  min-height: calc(100vh);
 }
 
 h1,
@@ -34,6 +34,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: normal;
+  font-family: var(--font-family-titre);
 }
 
 hr {

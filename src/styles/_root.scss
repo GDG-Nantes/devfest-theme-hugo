@@ -1,24 +1,28 @@
 :root {
-  --primary: #1976d2;
-  --primary-txt: #fff;
+  --primary: #4483A2;
+  --primary-txt: white;
+
+  --secondary: white;
+  --secondary-txt-blue: #4483A2;
+  --secondary-txt-orange: var(--darken-3);
+  --secondary-txt: var(--secondary-txt-blue);
+
+  --tertiary: #ED7954;
+  --tertiary-txt: white;
 
 
-  --accent: grey;
-  --accent-txt: #fff;
-
-  --base: #FFF;
-  --base-text: #424242;
-  --base-secondary-text: #636363;
   --link-secondary-text: #424242;
   --toc-text: var(--primary);
 
-  --darken-1: rgba(0, 0, 0, .125);
-  --darken-2: rgba(0, 0, 0, .25);
-  --darken-3: rgba(0, 0, 0, .5);
+  --darken-1: #3b728d;
+  --darken-2: #326279;
+  --darken-3: #214151;
 
   --lighten-1: hsla(0, 100%, 100%, .125);
   --lighten-2: hsla(0, 100%, 100%, .25);
   --lighten-3: hsla(0, 100%, 100%, .5);
+
+  --focus-color-white: rgb(217, 217, 223);
 
   --color-hero: ghostwhite;
 
@@ -43,7 +47,9 @@
   --container-margin-mobile: 3vw;
   --toolbar-height: 5.25rem;
 
-  --font-family: 'Roboto', sans-serif;
+  --font-family-titre: 'Bangers', cursive;
+  --font-family: 'Open Sans', bold;
+
 
   /* Tags */
   /*from https://github.com/d3/d3-scale-chromatic#schemePastel2*/
@@ -76,6 +82,7 @@
   /* Partners */
   --partner-support-height: 60px;
   --partner-platinum-height: calc(var(--partner-support-height) * 3);
+  --partner-platinum-height-home: calc(var(--partner-platinum-height) / 2);
   --partner-gold-height: calc(var(--partner-support-height) * 2);
 
   --animation: 0.3s cubic-bezier(0.4, 0, 0.2, 1);

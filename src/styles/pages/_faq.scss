@@ -1,9 +1,11 @@
 /* FAQ */
-.page.faq, .page.fr-faq {
+.page.faq,
+.page.fr-faq {
 
   #TableOfContents ul {
     text-align: left;
   }
+
   .tableofcontents {
     display: block;
   }
@@ -15,14 +17,22 @@
   }
 
   .content {
-    h1, h2, h3, h4, h5, h6 {
-      color: var(--primary-txt);     
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--primary-txt);
     }
+
     h2 {
       color: var(--secondary-txt);
       margin-top: 8rem;
       margin-bottom: 1rem;
     }
+
     h3 {
       color: var(--secondary);
       font-weight: bold;
@@ -33,6 +43,7 @@
       font-size: 2.5rem;
       border-top: var(--primarydarker) 2px solid;
     }
+
     a {
       color: var(--primary-txt);
       text-decoration: underline;
@@ -61,10 +72,12 @@
         color: var(--fg-mark-a);
         background-color: var(--bg-mark-a);
       }
+
       &.b {
         color: var(--fg-mark-b);
         background-color: var(--bg-mark-b);
       }
+
       &.t2 {
         color: var(--fg-mark-t2);
         background-color: var(--bg-mark-t2);
@@ -74,5 +87,3 @@
   }
 
 }
-
-

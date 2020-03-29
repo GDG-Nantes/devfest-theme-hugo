@@ -4,6 +4,8 @@ body>header {
   top: 0;
   z-index: 100;
   width: 100vw;
+  font-size: 1.25rem;
+  background-color: rgba(24, 26, 37, 0.25);
 
   .top-content {
     max-width: var(--theJdrSize);
@@ -14,8 +16,6 @@ body>header {
     align-items: center;
   }
 
-  box-shadow: 0 var(--space-1) var(--space-1) rgba(0, 0, 0, .5);
-  background: var(--primary);
   color: var(--primary-txt);
 
   .logo {
@@ -79,7 +79,6 @@ body>header {
     }
 
     li {
-      opacity: 0.6;
       transition: all var(--animation);
       border-bottom: thin solid transparent;
       border-radius: 5%;
@@ -103,18 +102,14 @@ body>header {
       }
 
       &.external {
-        opacity: 1;
-        background: rgba(0, 0, 0, .25);
+        border: 1px solid white;
       }
     }
 
     a {
       display: block;
-      text-transform: uppercase;
       padding: 0 var(--space-3);
       text-decoration: none;
-      line-height: calc(var(--toolbar-height) - (4 * var(--space-2)));
-      ;
       color: inherit;
       font-weight: 200;
 
@@ -172,7 +167,6 @@ body>header {
       display: none;
       width: 100%;
       padding: 0 1em;
-      background: var(--primary);
       flex-direction: column;
       justify-content: flex-start;
 

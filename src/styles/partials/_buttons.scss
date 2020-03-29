@@ -1,6 +1,9 @@
 button,
-a.btn, span.btn,
-input[type=button], input[type=reset], input[type=submit] {
+a.btn,
+span.btn,
+input[type=button],
+input[type=reset],
+input[type=submit] {
   display: inline-flex;
   align-items: center;
   background: var(--darken-1);
@@ -10,6 +13,7 @@ input[type=button], input[type=reset], input[type=submit] {
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 100;
+  font-family: var(--font-family-titre);
   cursor: pointer;
   // text-shadow: var(--extruded-light);
   --focus-color: var(--darken-1);
@@ -39,7 +43,7 @@ input[type=button], input[type=reset], input[type=submit] {
     align-items: center;
     justify-content: center;
     background-color: var(--secondary);
-    color: var(--color-hero);
+    color: var(--secondary-txt);
     border-radius: 50%;
     margin-left: 1ch;
     padding: var(--space-2);
@@ -56,8 +60,9 @@ input[type=button], input[type=reset], input[type=submit] {
     }
   }
 
-  &:hover, &:focus {
-    background-image: linear-gradient(to right, var(--focus-color), var(--focus-color) 100%);
+  &:hover,
+  &:focus {
+    background: var(--focus-color-white);
     text-decoration: none;
   }
 
@@ -69,13 +74,31 @@ input[type=button], input[type=reset], input[type=submit] {
   }
 }
 
+.secondary.orange {
+
+  button,
+  a.btn,
+  span.btn,
+  input[type=button],
+  input[type=reset],
+  input[type=submit] {
+
+    &.primary,
+    &.btn-icon-only {
+      background-color: var(--tertiary);
+      color: var(--tertiary-txt);
+    }
+  }
+}
+
 form:invalid button,
 button[aria-disabled],
 a.btn[aria-disabled],
 span.btn[aria-disabled] {
   opacity: .5;
   cursor: not-allowed;
-  filter: grayscale(100%);;
+  filter: grayscale(100%);
+  ;
 }
 
 a.goto-top {

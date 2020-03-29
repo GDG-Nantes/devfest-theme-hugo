@@ -2,7 +2,10 @@ form {
   display: flex;
   flex-direction: column;
 
-  button, input[type=button], input[type=reset], input[type=submit] {
+  button,
+  input[type=button],
+  input[type=reset],
+  input[type=submit] {
     align-self: flex-end;
   }
 }
@@ -18,7 +21,7 @@ form input {
   line-height: 2.4rem;
   padding: var(--space-2);
   border-radius: var(--space-1);
-  color: var(--base-text);
+  color: var(--primary-txt);
 
   &::placeholder {
     color: var(--darken-3);

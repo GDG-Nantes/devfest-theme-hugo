@@ -1,6 +1,11 @@
 body>main {
   flex-grow: 1;
 
+  >*:first-child {
+    padding-top: var(--toolbar-height);
+  }
+
+
   &>section {
     margin: 2rem var(--container-margin);
     padding-left: 0;
@@ -10,16 +15,19 @@ body>main {
       margin: 1rem;
     }
 
-    &.primary {
-      background-color: var(--primary);
-      color: var(--primary-txt);
-    }
+  }
 
-    &.accent {
-      background-color: var(--accent);
-      color: var(--accent-txt);
-    }
+  background-color: var(--primary);
+  color: var(--primary-txt);
 
+  .secondary {
+    background-color: var(--secondary);
+    --secondary-txt: var(--secondary-txt-blue);
+    color: var(--secondary-txt);
+
+    &.orange {
+      --secondary-txt: var(--secondary-txt-orange)
+    }
   }
 }
 

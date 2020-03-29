@@ -4,7 +4,7 @@ html {
 	-webkit-font-feature-settings: "liga";
 	-moz-font-feature-settings: "liga=1";
 	-moz-font-feature-settings: "liga";
-	-ms-font-feature-settings: "liga" 1;
+	-ms-font-feature-settings: "liga"1;
 	-o-font-feature-settings: "liga";
 	font-feature-settings: "liga";
 
@@ -12,21 +12,25 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 
 	// responsive font
-	font-size: 62.5%;
+	font-size: 12px;
+
 	@include mq($until: xl) {
-		font-size: 60%;
+		font-size: 14px;
 	}
+
 	@include mq($until: lg) {
-		font-size: 58%;
+		font-size: 12px;
 	}
+
 	@include mq($until: md) {
-		font-size: 57%;
+		font-size: 10px;
 	}
+
 	@include mq($until: sm) {
-		font-size: 54%;
+		font-size: 8px;
 	}
 }
+
 body {
-	font-size: 1.6rem;
 	line-height: 1.5;
 }
