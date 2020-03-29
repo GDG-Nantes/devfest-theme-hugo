@@ -1,5 +1,5 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
-<div class="hero">
+<div class="container {{ .Get "class" }}">
 	{{ if .Inner }}
 	<div class="description">
 		{{ .Inner }}

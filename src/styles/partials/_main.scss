@@ -7,7 +7,7 @@ body>main {
 
 
   &>section {
-    margin: 2rem var(--container-margin);
+    margin: 0;
     padding-left: 0;
     padding-right: 0;
 
@@ -28,6 +28,11 @@ body>main {
     &.orange {
       --secondary-txt: var(--secondary-txt-orange)
     }
+  }
+
+  .tertiary {
+    background-color: var(--tertiary);
+    color: var(--tertiary-txt);
   }
 }
 

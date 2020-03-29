@@ -1,9 +1,17 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
-<div class="hero">
-	<h1>{{ $.Page.Title }}</h1>
-	{{ if .Inner }}
-	<div class="description">
-		{{ .Inner }}
+{{ $img := .Get "img" }}
+{{ $imgLabel := .Get "imgLabel" }}
+<div class="hero" {{ if $img }}style="background-image: url('{{ $img }}');"
+	{{ end }}{{ if $imgLabel }}aria-label="{{ $imgLabel }}" {{ end }}>
+	<div class="inner">
+		<div class="hero-inner">
+			<h1 class="hero-title">{{ $.Page.Title }}</h1>
+		</div>
 	</div>
-	{{ end }}
+</div>
+{{ if .Inner }}
+<div class="description">
+	{{ .Inner }}
+</div>
+{{ end }}
 </div>

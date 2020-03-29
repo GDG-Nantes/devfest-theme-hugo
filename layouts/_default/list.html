@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 {{ .Content }}
-
+{{ if .Pages }}
 <hr>
 
 <ul class="pages">
@@ -11,5 +11,5 @@
 	</li>
 	{{ end }}
 </ul>
-
+{{ end }}
 {{ end }}

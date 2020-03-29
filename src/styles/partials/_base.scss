@@ -3,7 +3,6 @@ html {
   font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--darken-2);
 }
 
 *,
@@ -83,8 +82,7 @@ img {
   max-width: 100%;
 }
 
-body>main>section.container,
-body>header.container,
-body>footer.container {
+body>main .container {
   padding: 4rem var(--container-margin);
+  font-size: 1.25rem;
 }

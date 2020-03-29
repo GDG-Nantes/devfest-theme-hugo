@@ -1,85 +1,48 @@
 /* ATTENDING */
 .section.attending {
 
-  h2 {
-    color: var(--primary);
-    margin-bottom: 3.2rem;
-  }
-
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    line-height: 1.3;
-  }
-
   .centered-img {
     text-align: center;
     margin: var(--space-3) 0;
     background-size: cover !important;
   }
 
-  .citymap {
-    border-bottom: var(--secondary) 18px solid;
-
-    h2 {
-      color: var(--tertiary);
-      text-transform: uppercase;
-    }
-  }
-
-  .location,
-  .location-title {
-    h2 {
-      margin-top: 0;
-      font-size: 4.4rem;
-    }
-  }
-
-  .location-title {
-    h2 {
-      padding: 11rem 0 0;
-      text-align: center;
-    }
-  }
-
   .location {
-    position: relative;
     padding: 0;
-    // background: var(--darken-1);
+    margin: 0;
+    position: relative;
 
     .map {
       display: block;
-      height: 664px;
-      background-position: center center;
-      background-size: cover;
-    }
 
-    h2 {
-      margin-bottom: 30px;
-      font-weight: 400;
+      &>* {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
     }
 
     .description {
       display: inline-block;
-      padding: 4.5rem 6rem 6.5rem;
-      width: 500px;
-      max-width: 100%;
       position: absolute;
-      bottom: 6.2rem;
-      right: 3.2rem;
+      padding: var(--space-4);
+      width: 400px;
+      max-width: 100%;
+      bottom: 2rem;
+      right: 2rem;
       background-color: var(--tertiary);
       color: var(--tertiary-txt);
+
+      h2 {
+        font-family: var(--font-family);
+        font-size: 3rem;
+      }
 
       .direction {
         display: flex;
         align-items: center;
       }
-    }
-
-    .btn.btn-icon-only {
-      margin-left: 18px;
     }
   }
 
