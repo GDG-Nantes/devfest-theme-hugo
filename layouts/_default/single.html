@@ -1,14 +1,18 @@
 {{ define "main" }}
 
 <div class="hero">
-	<h1>{{ .Title }}</h1>
+	<div class="inner">
+		<div class="hero-inner">
+			<h1 class="hero-title">{{ .Title }}</h1>
+		</div>
+	</div>
 	<!-- <div class="description">
 		{{ .TableOfContents }}
 	</div> -->
 </div>
 
-<section class="content">
+<div class="container">
 	{{ .Content }}
-</section>
+</div>
 
 {{ end }}

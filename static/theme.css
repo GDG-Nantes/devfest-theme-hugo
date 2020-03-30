@@ -130,7 +130,8 @@ h5,
 h6 {
   margin: 0;
   font-weight: normal;
-  font-family: var(--font-family-titre); }
+  font-family: var(--font-family-titre);
+  text-shadow: -1px 0 var(--darken-2), 0 1px var(--darken-2), 1px 0 var(--darken-2), 0 -1px var(--darken-2); }
 
 hr {
   border-color: var(--darken-1);
@@ -337,8 +338,14 @@ body > main {
     --secondary-txt: var(--secondary-txt-blue);
     color: var(--secondary-txt); }
     body > main .secondary.orange {
-      --secondary-txt: var(--secondary-txt-orange)
-    ; }
+      --secondary-txt: var(--secondary-txt-orange); }
+      body > main .secondary.orange h1,
+      body > main .secondary.orange h2,
+      body > main .secondary.orange h3,
+      body > main .secondary.orange h4,
+      body > main .secondary.orange h5,
+      body > main .secondary.orange h6 {
+        text-shadow: none; }
   body > main .tertiary {
     background-color: var(--tertiary);
     color: var(--tertiary-txt); }
@@ -694,7 +701,8 @@ a.social {
   max-height: 400px;
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: cover; }
+  background-size: cover;
+  background-image: url("/images/backgrounds/back-0.jpg"); }
   .hero h1 {
     padding: 2rem var(--container-margin); }
   .hero .inner {
@@ -1235,7 +1243,8 @@ form input {
   position: relative;
   font-weight: 300; }
   .home main .location .map {
-    display: block; }
+    display: block;
+    height: 600px; }
     .home main .location .map > * {
       width: 100%;
       height: 100%;
@@ -1244,11 +1253,11 @@ form input {
   .home main .location .description {
     display: inline-block;
     padding: var(--space-4);
-    background-color: var(--primary);
+    background-color: var(--tertiary);
     width: 400px;
     position: absolute;
     bottom: 2rem;
-    right: 2rem; }
+    left: 2rem; }
     .home main .location .description .direction {
       display: flex;
       align-items: center; }

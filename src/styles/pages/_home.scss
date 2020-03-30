@@ -152,6 +152,7 @@
 
     .map {
       display: block;
+      height: 600px;
 
       &>* {
         width: 100%;
@@ -164,11 +165,11 @@
     .description {
       display: inline-block;
       padding: var(--space-4);
-      background-color: var(--primary);
+      background-color: var(--tertiary);
       width: 400px;
       position: absolute;
       bottom: 2rem;
-      right: 2rem;
+      left: 2rem;
 
       .direction {
         display: flex;
