@@ -62,3 +62,16 @@
     }
   }
 }
+
+@include mq($until: lg) {
+  .section.attending {
+    .location .description {
+      position: relative;
+      top: unset;
+      bottom: unset;
+      left: 0;
+      right: unset;
+      width: 100%;
+    }
+  }
+}

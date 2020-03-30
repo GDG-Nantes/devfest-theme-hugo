@@ -1,20 +1,13 @@
 body>main {
   flex-grow: 1;
+  // margin-top: var(--toolbar-height);
 
-  >*:first-child {
-    padding-top: var(--toolbar-height);
-  }
 
 
   &>section {
     margin: 0;
     padding-left: 0;
     padding-right: 0;
-
-    @include mq($until: md) {
-      margin: 1rem;
-    }
-
   }
 
   background-color: var(--primary);

@@ -19,10 +19,10 @@ html {
 body {
   background: var(--primary);
   color: var(--primary-txt);
-  margin: 0 0;
+  margin: var(--toolbar-height) 0 0;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh);
+  min-height: calc(100vh - var(--toolbar-height));
 }
 
 h1,

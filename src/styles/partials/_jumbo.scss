@@ -1,6 +1,6 @@
 .jumbo {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - var(--toolbar-height));
   max-width: 100%;
   display: flex;
   justify-content: center;
@@ -28,7 +28,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-position: top;
+    background-position: 0 var(--toolbar-height);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: contain;
