@@ -32,12 +32,8 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-weight: normal;
+  font-weight: 500;
   font-family: var(--font-family-titre);
-  text-shadow: -1px 0 var(--darken-2),
-    0 1px var(--darken-2),
-    1px 0 var(--darken-2),
-    0 -1px var(--darken-2)
 }
 
 hr {

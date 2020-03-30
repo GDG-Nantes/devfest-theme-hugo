@@ -118,24 +118,5 @@
 // Dark theme
 @media (prefers-color-scheme: dark) {
 
-  :root {
-    --base: #222;
-    --base-text: #ddd;
-    --primary: #0d47a1;
-
-    --toc-text: #64b5f6;
-
-    --color-hero: #181818;
-
-    --lighten-1: rgba(0, 0, 0, .125);
-    --lighten-2: rgba(0, 0, 0, .25);
-    --lighten-3: rgba(0, 0, 0, .5);
-
-    --darken-1: hsla(0, 100%, 100%, .125);
-    --darken-2: hsla(0, 100%, 100%, .25);
-    --darken-3: hsla(0, 100%, 100%, .5);
-
-    --footer-bg: #000;
-    --footer-fg: #777;
-  }
+  :root {}
 }
