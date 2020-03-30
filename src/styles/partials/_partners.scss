@@ -28,16 +28,18 @@
     align-items: stretch;
     justify-content: center;
 
-    filter: grayscale(100%) sepia(1) saturate(10000%) hue-rotate(560deg) brightness(0.5);
+    //filter: grayscale(100%) sepia(1) saturate(10000%) hue-rotate(560deg) brightness(0.5);
+    filter: grayscale(100%);
+
 
     transition: box-shadow var(--animation);
     cursor: pointer;
     color: transparent;
 
-    &:hover,
+    /* &:hover,
     &:focus {
       box-shadow: var(--box-shadow-2);
-    }
+    } */
 
     overflow: hidden;
 
@@ -68,6 +70,16 @@
   flex-basis: 200px;
 }
 
+.partners-group.partner-partner ul li,
+.partners-group.partner-startup ul li {
+  height: var(--partner-partner-height);
+  flex-basis: 150px;
+}
+.partners-group.partner-communities ul li,
+.partners-group.partner-startup ul li {
+  height: var(--partner-communities-height);
+  flex-basis: 150px;
+}
 
 /* Partner fancy name */
 

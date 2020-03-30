@@ -84,6 +84,9 @@
   --partner-platinum-height: calc(var(--partner-support-height) * 3);
   --partner-platinum-height-home: calc(var(--partner-platinum-height) / 2);
   --partner-gold-height: calc(var(--partner-support-height) * 2);
+  --partner-partner-height: calc(var(--partner-support-height) * 1.25);
+  --partner-communities-height: calc(var(--partner-support-height) * 1.25);
+
 
   --animation: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
