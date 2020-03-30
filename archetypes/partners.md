@@ -11,5 +11,3 @@ socials:
   - name: linkedin
     url: 'https://www.linkedin.com/in/airbus'
 ---
-
-TODO Description

@@ -116,7 +116,8 @@ h5,
 h6 {
   margin: 0;
   font-weight: 500;
-  font-family: var(--font-family-titre); }
+  font-family: var(--font-family-titre);
+  letter-spacing: 0.4px; }
 
 hr {
   border-color: var(--darken-1);
@@ -176,10 +177,10 @@ html {
       font-size: 12px; } }
   @media (max-width: 44.99em) {
     html {
-      font-size: 10px; } }
+      font-size: 11px; } }
   @media (max-width: 33.74em) {
     html {
-      font-size: 8px; } }
+      font-size: 10px; } }
 
 body {
   line-height: 1.5; }
@@ -191,6 +192,7 @@ body > header {
   width: 100vw;
   font-size: 1.25rem;
   background-color: var(--primary);
+  border-bottom: 1px solid #bddded;
   color: var(--primary-txt); }
   body > header .top-content {
     max-width: var(--theJdrSize);

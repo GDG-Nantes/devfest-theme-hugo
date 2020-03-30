@@ -23,11 +23,11 @@ html {
 	}
 
 	@include mq($until: md) {
-		font-size: 10px;
+		font-size: 11px;
 	}
 
 	@include mq($until: sm) {
-		font-size: 8px;
+		font-size: 10px;
 	}
 }
 
