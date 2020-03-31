@@ -2277,70 +2277,49 @@ form input {
 .page.fr-faq .tableofcontents {
   display: block; }
 
-@media (max-width: 44.99em) {
-  .page.faq .hero .description,
-  .page.fr-faq .hero .description {
-    padding: 0; } }
+.page.faq .container h1,
+.page.faq .container h2,
+.page.faq .container h3,
+.page.faq .container h4,
+.page.faq .container h5,
+.page.faq .container h6,
+.page.fr-faq .container h1,
+.page.fr-faq .container h2,
+.page.fr-faq .container h3,
+.page.fr-faq .container h4,
+.page.fr-faq .container h5,
+.page.fr-faq .container h6 {
+  color: var(--secondary-txt-orange); }
 
-.page.faq .content h1,
-.page.faq .content h2,
-.page.faq .content h3,
-.page.faq .content h4,
-.page.faq .content h5,
-.page.faq .content h6,
-.page.fr-faq .content h1,
-.page.fr-faq .content h2,
-.page.fr-faq .content h3,
-.page.fr-faq .content h4,
-.page.fr-faq .content h5,
-.page.fr-faq .content h6 {
-  color: var(--primary-txt); }
-
-.page.faq .content h2,
-.page.fr-faq .content h2 {
-  color: var(--secondary-txt);
-  margin-top: 8rem;
-  margin-bottom: 1rem; }
-
-.page.faq .content h3,
-.page.fr-faq .content h3 {
-  color: var(--secondary);
-  font-weight: bold;
+.page.faq .container h3,
+.page.fr-faq .container h3 {
   margin-left: 0;
-  margin-top: 3.5rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   font-size: 2.5rem;
   border-top: var(--primarydarker) 2px solid; }
 
-.page.faq .content a,
-.page.fr-faq .content a {
+.page.faq .container a,
+.page.fr-faq .container a {
   color: var(--primary-txt);
   text-decoration: underline; }
 
-.page.faq .content li,
-.page.fr-faq .content li {
-  line-height: 1.5; }
-
-@media (max-width: 44.99em) {
-  .page.faq .content ul,
-  .page.fr-faq .content ul {
-    padding-left: 2ch; } }
-
-.page.faq .content mark,
-.page.fr-faq .content mark {
+.page.faq .container mark,
+.page.fr-faq .container mark {
   font-weight: bold;
   border-radius: .25em;
   padding: .125em; }
-  .page.faq .content mark.a,
-  .page.fr-faq .content mark.a {
+  .page.faq .container mark.a,
+  .page.fr-faq .container mark.a {
     color: var(--fg-mark-a);
     background-color: var(--bg-mark-a); }
-  .page.faq .content mark.b,
-  .page.fr-faq .content mark.b {
+  .page.faq .container mark.b,
+  .page.fr-faq .container mark.b {
     color: var(--fg-mark-b);
     background-color: var(--bg-mark-b); }
-  .page.faq .content mark.t2,
-  .page.fr-faq .content mark.t2 {
+  .page.faq .container mark.t2,
+  .page.fr-faq .container mark.t2 {
     color: var(--fg-mark-t2);
     background-color: var(--bg-mark-t2); }
