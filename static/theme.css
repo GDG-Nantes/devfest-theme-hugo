@@ -171,7 +171,7 @@ html {
   font-size: 12px; }
   @media (max-width: 71.24em) {
     html {
-      font-size: 14px; } }
+      font-size: 12px; } }
   @media (max-width: 59.99em) {
     html {
       font-size: 12px; } }
@@ -201,6 +201,8 @@ body > header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center; }
+    body > header .top-content .logo a {
+      display: flex; }
   body > header .logo {
     padding: var(--space-2) 0; }
     body > header .logo img {
@@ -616,8 +618,7 @@ a.social {
     text-align: center; }
   .jumbo .jumbo-logo {
     max-width: 100%;
-    width: var(--jumbo-logo-width, 400px);
-    height: auto;
+    max-height: 50%;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5)); }
   .jumbo p {
     margin: var(--space-2) 0;
@@ -634,19 +635,20 @@ a.social {
     background-size: contain;
     background-color: var(--secondary); }
   .jumbo .inner-wrapper {
-    max-width: 75vw; }
+    max-width: 75vw;
+    max-height: 75vh;
+    display: block; }
     .jumbo .inner-wrapper .inner {
       padding: var(--space-4);
       color: var(--secondary-txt);
       position: relative;
       overflow: hidden;
       text-align: center;
-      display: flex;
+      display: block;
       flex-direction: column; }
       .jumbo .inner-wrapper .inner h2 {
         font-size: 5rem;
-        margin: var(--space-3) 0;
-        font-weight: bold; }
+        margin: var(--space-3) 0; }
       .jumbo .inner-wrapper .inner h3 {
         font-size: 3rem;
         margin: var(--space-3) 0; }
@@ -676,10 +678,25 @@ a.social {
   .jumbo .inner {
     max-width: 80vw;
     padding: 0; }
-  .jumbo .inner h1 {
+  .jumbo .inner {
     font-size: 1.5rem; }
     .jumbo .inner h1 img {
       max-width: 100%; } }
+
+@media (max-width: 71.24em) {
+  .jumbo .inner-wrapper .inner {
+    padding: var(--space-2) var(--space-1); }
+    .jumbo .inner-wrapper .inner h2,
+    .jumbo .inner-wrapper .inner h3 {
+      margin: var(--space-2) 0; } }
+
+@media (max-width: 71.24em) and (orientation: landscape) {
+  .scroll-down {
+    visibility: hidden; }
+  .jumbo .inner-wrapper .inner h2 {
+    font-size: 4rem; }
+  .jumbo .inner-wrapper .inner h3 {
+    font-size: 2rem; } }
 
 .hero {
   position: relative;

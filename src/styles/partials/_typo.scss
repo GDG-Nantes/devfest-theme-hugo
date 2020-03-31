@@ -15,7 +15,7 @@ html {
 	font-size: 12px;
 
 	@include mq($until: xl) {
-		font-size: 14px;
+		font-size: 12px;
 	}
 
 	@include mq($until: lg) {
