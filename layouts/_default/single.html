@@ -1,8 +1,10 @@
 {{ define "main" }}
+{{ $img := .Params.Hero.Img | default "back-0" }}
+{{ $titleAlign := .Params.Hero.Align | default "center" }}
 
-<div class="hero">
+<div class="hero" style="background-image: url('/images/backgrounds/{{ $img }}.jpg');">
 	<div class="inner">
-		<div class="hero-inner">
+		<div class="hero-inner" style="text-align: {{ $titleAlign }};">
 			<h1 class="hero-title">{{ .Title }}</h1>
 		</div>
 	</div>

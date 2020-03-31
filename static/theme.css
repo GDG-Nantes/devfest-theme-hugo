@@ -706,8 +706,7 @@ a.social {
   max-height: 400px;
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: cover;
-  background-image: url("/images/backgrounds/back-0.jpg"); }
+  background-size: cover; }
   .hero h1 {
     padding: 2rem var(--container-margin); }
   .hero .inner {
