@@ -2270,11 +2270,11 @@ form input {
 
 /* FAQ */
 .page.faq #TableOfContents ul,
-.page.fr-faq #TableOfContents ul {
+.page.frfaq #TableOfContents ul {
   text-align: left; }
 
 .page.faq .tableofcontents,
-.page.fr-faq .tableofcontents {
+.page.frfaq .tableofcontents {
   display: block; }
 
 .page.faq .container h1,
@@ -2283,16 +2283,16 @@ form input {
 .page.faq .container h4,
 .page.faq .container h5,
 .page.faq .container h6,
-.page.fr-faq .container h1,
-.page.fr-faq .container h2,
-.page.fr-faq .container h3,
-.page.fr-faq .container h4,
-.page.fr-faq .container h5,
-.page.fr-faq .container h6 {
+.page.frfaq .container h1,
+.page.frfaq .container h2,
+.page.frfaq .container h3,
+.page.frfaq .container h4,
+.page.frfaq .container h5,
+.page.frfaq .container h6 {
   color: var(--secondary-txt-orange); }
 
 .page.faq .container h3,
-.page.fr-faq .container h3 {
+.page.frfaq .container h3 {
   margin-left: 0;
   margin-top: 3rem;
   margin-bottom: 0;
@@ -2302,24 +2302,24 @@ form input {
   border-top: var(--primarydarker) 2px solid; }
 
 .page.faq .container a,
-.page.fr-faq .container a {
+.page.frfaq .container a {
   color: var(--primary-txt);
   text-decoration: underline; }
 
 .page.faq .container mark,
-.page.fr-faq .container mark {
+.page.frfaq .container mark {
   font-weight: bold;
   border-radius: .25em;
   padding: .125em; }
   .page.faq .container mark.a,
-  .page.fr-faq .container mark.a {
+  .page.frfaq .container mark.a {
     color: var(--fg-mark-a);
     background-color: var(--bg-mark-a); }
   .page.faq .container mark.b,
-  .page.fr-faq .container mark.b {
+  .page.frfaq .container mark.b {
     color: var(--fg-mark-b);
     background-color: var(--bg-mark-b); }
   .page.faq .container mark.t2,
-  .page.fr-faq .container mark.t2 {
+  .page.frfaq .container mark.t2 {
     color: var(--fg-mark-t2);
     background-color: var(--bg-mark-t2); }
