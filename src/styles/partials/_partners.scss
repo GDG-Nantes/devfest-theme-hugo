@@ -1,4 +1,25 @@
+.partners {
+  background: var(--secondary);
+  .inner {
+    text-align: center;
+  }
+  .hero-desc .btn {
+    margin-top: 20px;
+  }
+}
+
 .partners-group {
+  .fancy {
+    display: inline-block;
+    margin-bottom: 3.2rem;
+    width: 100%;
+    text-align: center;
+    }
+
+    .inner {
+    max-width: 1900px;
+    }
+
   h3 {
     text-align: center;
     margin: var(--space-4) 0;

@@ -2,12 +2,7 @@
 
 {{ $lang := $.Page.Language.Lang }}
 
-<div class="hero">
-	<h1>{{ $.Page.Params.Title }}</h1>
-	<div class="description">
-		{{ .Content }}
-	</div>
-</div>
+{{ .Content }}
 
 <section class="blogs">
 	{{ range .Pages }}

@@ -1,8 +1,9 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 {{ $img := .Get "img" }}
 {{ $imgLabel := .Get "imgLabel" }}
-<div class="hero" {{ if $img }}style="background-image: url('{{ $img }}');"
-	{{ end }}{{ if $imgLabel }}aria-label="{{ $imgLabel }}" {{ end }}>
+
+<div class="hero">
+	<div class="hero-img" {{ if $img }}style="background-image: url('{{ $img }}');" {{ end }}{{ if $imgLabel }}aria-label="{{ $imgLabel }}"{{ end }}></div>
 	<div class="inner">
 		<div class="hero-inner">
 			<h1 class="hero-title">{{ $.Page.Title }}</h1>
@@ -10,8 +11,9 @@
 	</div>
 </div>
 {{ if .Inner }}
-<div class="description">
-	{{ .Inner }}
+<div class="hero-desc">
+	<div class="inner description">
+        {{ .Inner }}
+    </div>
 </div>
 {{ end }}
-</div>

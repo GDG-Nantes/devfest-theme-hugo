@@ -1,16 +1,13 @@
 {{ define "main" }}
-{{ $img := .Params.Hero.Img | default "back-0" }}
-{{ $titleAlign := .Params.Hero.Align | default "center" }}
+{{ $img := .Params.Hero.Img | default "back-0.jpg" }}
 
-<div class="hero" style="background-image: url('/images/backgrounds/{{ $img }}.jpg');">
+<div class="hero">
+    <div class="hero-img" style="background-image: url('/images/backgrounds/{{ $img }}');" aria-label="DevFest Nantes 2020"></div>
 	<div class="inner">
-		<div class="hero-inner" style="text-align: {{ $titleAlign }};">
+		<div class="hero-inner">
 			<h1 class="hero-title">{{ .Title }}</h1>
 		</div>
 	</div>
-	<!-- <div class="description">
-		{{ .TableOfContents }}
-	</div> -->
 </div>
 
 <div class="container">
