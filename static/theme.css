@@ -727,7 +727,7 @@ a.social {
     color: var(--tertiary);
     font-size: 4.4rem;
     font-weight: 700; }
-  @media (max-width: 59.99em) {
+  @media (max-width: 71.24em) {
     .hero .hero-img {
       position: relative;
       background-position: 90% center; }
