@@ -2232,11 +2232,13 @@ form input {
   .page.blog .content p {
     text-align: justify;
     margin-bottom: 2.4rem;
-    line-height: 2.72rem; }
+    line-height: 2.72rem;
+    font-size: 1.25rem; }
   .page.blog .content ul {
     margin-left: 1.6rem; }
     .page.blog .content ul li {
-      line-height: 2.72rem; }
+      line-height: 2.72rem;
+      font-size: 1.25rem; }
 
 .section.team section.members + .members {
   background-color: var(--primarydarker); }
