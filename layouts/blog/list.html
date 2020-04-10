@@ -11,10 +11,10 @@
 		<a class="blog" href="{{ .Permalink }}">
 			{{ $img := (replace .Params.image "." "-mini.") }}
 			{{ partial "picture" (dict "img" $img "class" "img") }}
-			
+
 			<div class="info">
-				<div class="date">{{ partial "date-short.html" (dict "time" .Date "lang" $lang) }}</div>
 				<h2>{{ .Title }}</h2>
+				<div class="date">{{ partial "date-short.html" (dict "time" .Date "lang" $lang) }}</div>
 				<span class="brief">{{ .Params.brief }}</span>
 				<!-- <div class="reading">{{ .ReadingTime }}</div> -->
 				<p>{{ .Summary }} ...</p>

@@ -2159,7 +2159,7 @@ form input {
       .section.blog .blogs a.blog .info .date {
         margin-bottom: 0.7rem;
         align-self: flex-start;
-        color: var(--secondary); }
+        color: var(--darken-3); }
       .section.blog .blogs a.blog .info p {
         line-height: 1.75; }
       .section.blog .blogs a.blog .info .summary {
