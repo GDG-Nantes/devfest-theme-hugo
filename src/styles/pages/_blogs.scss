@@ -1,7 +1,7 @@
 .section.blog {
 
   @media (max-width: var(--breakpoint-lg)) {
-    main > section {
+    main>section {
       margin: 3.2rem var(--container-margin-mobile);
     }
   }
@@ -11,15 +11,18 @@
     .blog {
       flex-direction: row;
     }
+
     .img {
       margin-right: 3rem;
     }
   }
+
   // second
   article:nth-child(even) {
     .blog {
       flex-direction: row-reverse;
     }
+
     .img {
       margin-left: 3rem;
     }
@@ -52,11 +55,18 @@
         display: inline-block;
         background-position: center center;
         background-size: cover;
-        --size: 30rem;
-        flex: 0 0 var(--size, 25.6rem);
-        height: var(--size, 25.6rem);
-        width: var(--size, 25.6rem);
+        --size: 25rem;
+        flex: 0 0 var(--size);
+        height: var(--size);
+        width: var(--size);
         border-radius: var(--space-2);
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
 
       .info {
