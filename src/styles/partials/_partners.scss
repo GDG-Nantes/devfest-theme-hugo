@@ -1,8 +1,10 @@
 .partners {
   background: var(--secondary);
+
   .inner {
     text-align: center;
   }
+
   .hero-desc .btn {
     margin-top: 20px;
   }
@@ -14,11 +16,11 @@
     margin-bottom: 3.2rem;
     width: 100%;
     text-align: center;
-    }
+  }
 
-    .inner {
+  .inner {
     max-width: 1900px;
-    }
+  }
 
   h3 {
     text-align: center;
@@ -40,7 +42,6 @@
   }
 
   .partner {
-    padding: var(--space-3);
     border-radius: 2px;
     height: 100%;
     width: 100%;
@@ -51,7 +52,6 @@
 
     //filter: grayscale(100%) sepia(1) saturate(10000%) hue-rotate(560deg) brightness(0.5);
     filter: grayscale(100%);
-
 
     transition: box-shadow var(--animation);
     cursor: pointer;
@@ -68,15 +68,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100%;
+      width: 100%;
 
-      &>* {
+      & > * {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
         object-position: 50% 50%;
       }
     }
-
   }
 }
 
@@ -96,6 +97,7 @@
   height: var(--partner-partner-height);
   flex-basis: 150px;
 }
+
 .partners-group.partner-communities ul li,
 .partners-group.partner-startup ul li {
   height: var(--partner-communities-height);

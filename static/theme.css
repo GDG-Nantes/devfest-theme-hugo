@@ -951,7 +951,6 @@ a.social {
     height: var(--partner-support-height); }
 
 .partners-group .partner {
-  padding: var(--space-3);
   border-radius: 2px;
   height: 100%;
   width: 100%;
@@ -970,7 +969,9 @@ a.social {
   .partners-group .partner picture {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    height: 100%;
+    width: 100%; }
     .partners-group .partner picture > * {
       max-width: 100%;
       max-height: 100%;
