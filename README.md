@@ -71,9 +71,9 @@ googleAnalytics = "UA-XXXXXXXX-X"
     googleWebmasterKey = "googleXXXXXXX" # https://support.google.com/webmasters/answer/9008080#html_verification
 
 [params.logos]
-    jumbo = "/images/logos/devfest_color_text_dark_dark.png"
-    header = "/images/logos/devfest_color_text_dark_dark.png"
-    footer = "/images/logos/devfest_gray_text.png"
+    jumbo = "/images/logos/devfest_color_text_dark.svg"
+    header = "/images/logos/devfest_color_text_dark.svg"
+    footer = "/images/logos/devfest_gray_text.svg"
 
 #[menu]
 #[[menu.main]]
@@ -169,7 +169,7 @@ The Home page is build with markdown and calling some shortcodes.
 ```hugo
 {{% jumbo img="/images/backgrounds/back-0.jpg" imgLabel="DevFest Toulouse 2019" %}}
 
-![](/images/logos/devfest_color_text_dark_dark.png)
+![](/images/logos/devfest_color_text_dark.svg)
 
 ## October 3rd, 2019
 ### Pierre Baudis congress center
